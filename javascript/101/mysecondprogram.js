@@ -21,7 +21,6 @@ let show = " He was the one who introudced me to this class"
 
 
 
-
 console.log(nameFirst, nameMiddle, nameLast, sideNote, apology, more,kids, work, school, facts, stuff, wrong, hope,  challenge, friend, always, show )
 
 
