@@ -17,11 +17,11 @@ let o = " Everyday is a challenge but thanks to my friend Matt Joseph who is in 
 let p = " i have known Matty J since i was about 3 years old and he would come to the Cape and visit his grandparentsin the summer!"
 let q = " he has always been there for me and has helped me through the toughest parts of my life."
 let r = " He was the one who introudced me to this class"
+let s = " Im so excited to see how much i can learn in the next 12 months! "
 
 
 
-
-console.log(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r )
+console.log(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s )
 
 
 
