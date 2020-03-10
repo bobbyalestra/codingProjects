@@ -44,8 +44,13 @@ for (var  i = 9; i > 0; i-=2){
 
 console.log(myArray)
 
-//next we will be console logging all of var i as an array
+//next we will be console logging all of var i as an array it will continue until defined
 
 var myArr = [ 2, 3, 4, 5, 6];
+var total = 0;
+for (var i = 0; i < myArr.length; i++){
+  total += myArr[i];
+}
+console.log(myArr[i]) 
 
-
+//
