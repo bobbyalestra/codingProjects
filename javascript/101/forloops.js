@@ -47,3 +47,5 @@ console.log(myArray)
 //next we will be console logging all of var i as an array
 
 var myArr = [ 2, 3, 4, 5, 6];
+
+
