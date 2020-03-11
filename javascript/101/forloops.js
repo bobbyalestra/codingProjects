@@ -67,4 +67,4 @@ let cohort11e = ["Chelsea", "Jamie", "Bobby", "Will", "Joey", "Arnell", "Zebra",
 for (let i = 0; i < cohort11e.length; i++){
 console.log(cohort11e.length) //will display how man variables are in array
  // console.log(cohort11e[2]) // will select secind name
-}
+} 
