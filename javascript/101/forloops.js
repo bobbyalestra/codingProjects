@@ -1,4 +1,18 @@
+
+
+
+// loop setup {for [initial integrater; condition; auto intergrater;]}
+//                 run code; then goes back to condition to auto integrater then back to code until condition is met.
+
+
+
+
+
+
 // will print hello 9 times
+
+
+
 
 for (let i = 0; i < 10; i++){
   console.log(i)
@@ -6,7 +20,7 @@ for (let i = 0; i < 10; i++){
 
 
 
-//  set up for ([initialization]; [condition]; [final-expression])
+//  set up for ([initialization]; [condition]; [auto integration])
 
 var myArray = [];
 
