@@ -34,8 +34,7 @@ console.log(...allStudents); // "the spread or three ..." take the elements out 
 const findStudent = theBoys.includes("Bobby");
 console.log(findStudent); // the .includes() searches for x and will return true if its there and false if it is not
 
-toUpperCase(theBoys);
-console.log(theBoys);
+
 
 
 
