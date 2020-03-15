@@ -4,5 +4,11 @@
 			"path": "javascript"
 		}
 	],
-	"settings": {},
+	"settings": {
+		{
+			"tabWidth": 2,
+			"useTabs": false
+		  }
+		  
+	},
 }
