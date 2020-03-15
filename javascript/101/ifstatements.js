@@ -48,13 +48,17 @@ console.log(testElseif());
  
 function testOtherElseif(score){
   if (score < 90) {
-    return "COngradulations You Passed "
+    return "Sorry, but you will be here forever"
   
   } else 
-  return "Sorry, but you will be here forever"
+  return "Cradulations Bobby, You are an allstar student"
 }
   
- testOtherElseIf(99);
+ testOtherElseif(99);
   
  console.log (testOtherElseif());
 
+
+ //more examples
+
+ 
