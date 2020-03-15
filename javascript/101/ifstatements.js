@@ -29,4 +29,14 @@ function testElse(val) {
   testElseIf(3); //will change log
   console.log(testElseIf())
 
+  // my examples other than code camp
+
+  function newTestCode(about){
+        if (about < 6 ){
+            return "Yay"
+        }   else 
+      return "nooooo"
   
+newTestcode(3);
+console.log(about)
+  }
