@@ -19,6 +19,15 @@ for (let i = 0; i < 10; i++){
 }
 
 
+// hotel app using loops
+
+let hotelCustomer = ["Joe", "Jeff", "john", "Jack", "Jim"];
+let hotelNum = [35, 45, 30, 160, 120];
+let roomsRented = [23, 54, 21, 2, 5];
+for (let i = 0; i < hotelCustomer.length; i++) {
+  console.log(`${hotelCustomer[i]} ${hotelNum[i]} total ${roomsRented[3]}`);
+}
+
 
 //  set up for ([initialization]; [condition]; [auto integration])
 
@@ -99,3 +108,25 @@ function filteredArray(arr, elem) {
 }
 
 console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+
+// more examples
+let customerNames = ["Mark", "Charles", "Clark", "James", "Mary"]
+let customerScores = [ 75, 86, 77, 94, 88]
+let passingScore = [90]
+
+for (let i = 0; i < customerNames.length; i++){
+     console.log(customerNames[i], customerScores[i])
+}
+
+
+
+// more examples of destinations in an array
+
+let places= ["Somewhere Warm", "Somewhere Cold", "Italy", "My next door neighbors house"]
+ 
+for (let i = 0; i < 1; i++){
+console.log(places) //will display all variables are in array
+
+
+}
