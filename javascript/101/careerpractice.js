@@ -6,4 +6,3 @@ for (let i = 0; i < customerNames.length; i++){
      console.log(customerNames[i], customerScores[i])
 }
 
-names prices 
