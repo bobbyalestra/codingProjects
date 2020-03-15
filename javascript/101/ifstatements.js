@@ -17,10 +17,13 @@ function testElse(val) {
   // intro to else if statements
 
 
-  function testElseIf(val) {
-    if (val > 10) {
+  function testElseIf(num) {
+    
+     
+
+    if (num > 10) {
       return "Greater than 10";
-    } else if (val < 5) { // adding an else if statement gives it an additional condition.
+    } else if (num < 5) { // adding an else if statement gives it an additional condition.
       return "Smaller than 5";
     } else{ // always end in else 
       return "Between 5 and 10";
@@ -31,12 +34,27 @@ function testElse(val) {
 
   // my examples other than code camp
 
-  function newTestCode(about){
+  function testElseif(about){
         if (about < 6 ){
             return "Yay"
         }   else 
       return "nooooo"
+      }
+  testElseif(3); // this will change the return line 
+console.log(testElseif()); 
+
+
+// another example 
+ 
+function testOtherElseif(score){
+  if (score < 90) {
+    return "COngradulations You Passed "
   
-newTestcode(3);
-console.log(about)
-  }
+  } else 
+  return "Sorry, but you will be here forever"
+}
+  
+ testOtherElseIf(99);
+  
+ console.log (testOtherElseif());
+
