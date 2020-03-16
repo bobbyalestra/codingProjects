@@ -79,13 +79,33 @@ console.log(testNotEqual())
 
 //more practice
 
-function newFunct(a, b)
-  let (a = b) 
+function newFun(a, b) {
+  
 
-  if (a | b){
-    return true
+  if (newFun || a, b ){
+    return true;
+  }
+ return false ;
+}
+
+  console.log(newFun());
+
+ 
+let a =6;
+let b =6 ;
+
+function newTester(a,b){
+    if ( newTester ||a, b ){
+      return false;
+    }
+   return true ;
   }
 
-  newFunct(a,b);
+  
+    console.log(newTester());
+  
+  
+  
+    
 
-  console.log(newFunct());
+      
