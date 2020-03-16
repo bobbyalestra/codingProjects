@@ -4,3 +4,5 @@ let result = extractStr.match(codingRegex);  // the result will equal the string
 console.log(codingRegex)
 
 
+// next is trying to find multiples of the word in  the  code.
+
