@@ -1,3 +1,25 @@
+//freecodecamp
+var ourArray = [];
+var i = 0;
+while(i < 5) {
+  ourArray.push(i);
+  i++;
+}
+console.log(ourArray)
+// Setup
+var ourArray = [];
+var i = 5;
+while(i >= 0) {
+  ourArray.push(i);
+  i--;
+}
+console.log(ourArray)
+
+
+
+
+
+
 
 
 

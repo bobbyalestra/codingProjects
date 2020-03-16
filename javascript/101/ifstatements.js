@@ -4,9 +4,9 @@ function testElse(val) {
     var result = "";
     
     if (val >= 6 ){
-      result = "Bigger than 5";
+      result = "number is bigger than 5";
     }else                       //no other if statement or condition that needs to be met. just add the result and return result.
-      result = "5 or Smaller";
+      result = "the number is 5 or Smaller";
     return result;
   }
   
@@ -22,11 +22,11 @@ function testElse(val) {
      
 
     if (num > 10) {
-      return "Greater than 10";
+      return "number is bigger than 10";
     } else if (num < 5) { // adding an else if statement gives it an additional condition.
       return "Smaller than 5";
     } else{ // always end in else 
-      return "Between 5 and 10";
+      return "somewhere between 5 and 10";
   }
   }
   testElseIf(3); //will change log
@@ -51,7 +51,7 @@ function testOtherElseif(score){
     return "Sorry, but you will be here forever"
   
   } else 
-  return "Cradulations Bobby, You are an allstar student"
+  return "Cradulations Bobby, You are an allstar student!"
 }
   
  testOtherElseif(99);
@@ -59,6 +59,33 @@ function testOtherElseif(score){
  console.log (testOtherElseif());
 
 
- //more examples
+ //more examples of functions
+  // code camp example and explanations
+ 3 == '3'  // returns true because JavaScript performs type conversion from string to number
+3 === '3' // returns false because the types are different and type conversion is not performed
 
  
+function testNotEqual(val) {
+  if (val != 99) {
+    // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+// Change this value to test
+testNotEqual(10);
+console.log(testNotEqual())
+
+//more practice
+
+function newFunct(a, b)
+  let (a = b) 
+
+  if (a | b){
+    return true
+  }
+
+  newFunct(a,b);
+
+  console.log(newFunct());
