@@ -1,17 +1,17 @@
 // intro to just else statements
 
 function testElse(val) {
-    var result = "";
+    let result = "";
     
     if (val >= 6 ){
-      result = "number is bigger than 5";
+      result = `number ${val}is bigger than 5`;
     }else                       //no other if statement or condition that needs to be met. just add the result and return result.
       result = "the number is 5 or Smaller";
     return result;
   }
   
   testElse(3); //changing the number will change the result
-  console.log(testElse())
+  console.log(testElse());
 
 
   // intro to else if statements
