@@ -63,7 +63,7 @@ function theNews(corona, president, school, homework){
         // the difference bet this one and the one above it, is that i tried to have no string text in the return and just console.log it.
       }  return ` ${corona}  ${president}  ${school} ${homework}`
     } 
-
+ //trying to us only templatle literals in the return
 console.log(theNews('Today in the news, the first topic was again mroe information about COVID-19', ' . Also the President, Donald Trump was also in the new per usual', 'luckily i have CareerDevs and that keeps my mind focused on other important things', ' and we also have homework which was to practice ifStatement and returns and im adding template literals'  ));
 
 
