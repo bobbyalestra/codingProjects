@@ -49,11 +49,11 @@ console.log(aboutMe('Bobby', '27 years old', 'male', 'coding', 'sleep'));
 // more practice with returns and template literals
 
 function theNews(corona, president, school, homework){
-    if (corona == ' again more information about the COVID-19') {
-      }  return `Today in the news, the first topic was ${corona} , . Also ${president} was also in the new per usual, luckily theres ${school} and ${homework}`
+    if (corona == ' again more information about the COVID-19') 
+        return `Today in the news, the first topic was ${corona} , . Also ${president} was also in the new per usual, luckily theres ${school} and ${homework}`
     } 
 
-console.log(theNews(' again mroe information about COVID-19', ' the President, Donald Trump', 'CareerDevs', 'ifStatement and returns'  ));
+console.log(theNews(' again more information about COVID-19', ' the President, Donald Trump', 'CareerDevs', 'ifStatement and returns'  ));
 
 
 // more practice with returns and template literals
