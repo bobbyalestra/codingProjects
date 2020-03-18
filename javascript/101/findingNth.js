@@ -5,9 +5,15 @@ let firstLetter = firstName[0];
 let lastName = "Alestra";
 let lastInitial = lastName[0];
 console.log(`${firstLetter} ${lastInitial}`) ;
-
  }
-console.log(firstNameLastName());
+(firstNameLastName());
+ function initials(){
+    let firstName = "Cameron"
+    let firstLetter = firstName[0];
+    let lastName = "Alestra";``
+    let lastInitial = lastName[0];
+    console.log(`${firstLetter} ${lastInitial}`)
+}
+(initials());
 
 
-function 
