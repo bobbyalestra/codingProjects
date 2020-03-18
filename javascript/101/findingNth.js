@@ -17,3 +17,4 @@ console.log(`${firstLetter} ${lastInitial}`) ;
 (initials());
 
 
+''
