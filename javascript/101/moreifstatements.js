@@ -17,7 +17,7 @@ function mustHave() {
     let prices = [4, 2, 1.80, 12.50];
     for (i = 0; i < essentials.length; i++){
         if (prices[i] >= 10){
-            consol.log (${essentials[i]}) 'This is too expensive';
+            consol.log (`${essentials[i]}`) 
         }else if (prices[i] < 10){
             return 'I guess this will do'
         }
