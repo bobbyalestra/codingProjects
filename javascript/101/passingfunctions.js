@@ -1,16 +1,16 @@
 
 function locations(originCity, destinationCity) {
 
- if (originCity = "Falmouth"){
+ 
     console.log(`I was born in one of the most boring towns on the Cape, ${originCity} and I still live in ${destinationCity}`)
- }
+ 
 }
 locations('Falmouth', 'Falmouth')
 
+codc
 
 
-
-function oldJobs(job1, job2, job3, job4,){
+function oJldobs(job1, job2, job3, job4,){
    let originCity = "Falmouth"
    let mentor = "Matthew Joseph"
    let institute = "CareerDevs"
