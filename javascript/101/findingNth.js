@@ -19,7 +19,7 @@ function initials(){
 }
 (initials());
 
-// finding the first intial of the first element in band
+// finding the first intial of the first element in band.
 
 let band = ['jamie', 'joe', 'bob']
 

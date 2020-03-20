@@ -36,7 +36,7 @@ oldJobs ('Silver Lounge', 'UPS', 'Dental Assistant', 'Sales Associate');
 
 
 
-//Arnells example
+//Arnells example.
 
 let city1 = "Boston"
 let city2 = "Paris"

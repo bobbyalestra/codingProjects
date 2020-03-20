@@ -16,7 +16,7 @@ function favoriteBeaches(beach1, beach2, beach3, beach4, beach5){
         return `, ${beach6} this is my least favorite beach to go to.`
     }
         else {
-        return ``
+        return 
     }
  }
  console.log("heres a list of my favorite beaches", [extraBeaches], "The Heights") 

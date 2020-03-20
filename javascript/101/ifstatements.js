@@ -32,7 +32,7 @@ function testElse(val) {
   testElseIf(3); //will change log
   console.log(testElseIf())
 
-  // my examples other than code camp
+  // my examples other than code camp.
 
   function testElseif(about){
         if (about < 6 ){

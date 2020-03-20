@@ -6,7 +6,8 @@ let theTeacher = ["Arnell"];
 
 allStudents.shift(); //removes for item of array
 console.log(allStudents);
-allStudents.pop(); //removes last item of array
+allStudents.pop(); //removes last item of array.
+
 console.log(allStudents);
 
 allStudents.unshift("Arneezy"); // adds "Arneezy" to the array

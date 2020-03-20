@@ -31,7 +31,7 @@ let employee = [['Arnell', 'Bobby', 'Will'], ['Margie', 'Gabby', 'Chelsea'], ['J
 
     //1 pring all all employee names in each deparetmemnt
 //2 print out just the second employee in each department
-// 3 print out the first letter of each employee in the last department
+// 3 print out the first letter of each employee in the last department.
 
 
 //4 print out the last letter of each employee

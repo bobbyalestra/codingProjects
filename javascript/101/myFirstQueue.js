@@ -7,7 +7,7 @@
     return removed; // Change this line
   }
   
-  // Setup
+  // Setup.
   var testArr = [1,2,3,4,5];
   
   // Display code

@@ -116,7 +116,7 @@ console.log(cohort11e.length) //will display how man variables are in array
 
 
 
-// Iterate Through All an Array's Items Using For Loops
+// Iterate Through All an Array's Items Using For Loops.
 
 function filteredArray(arr, elem) {
   let newArr = [];
