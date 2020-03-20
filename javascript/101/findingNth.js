@@ -19,9 +19,8 @@ function initials(){
 }
 (initials());
 
-//simplifying and just trying to find numbers
+// finding the first intial of the first element in band
 
-let firstName = 'Bobby'
-let lastName = 'Alestra'
-console.log((lastName.length/2))
-console.log(lastName[Math.round(lastName.length/2)])
+let band = ['jamie', 'joe', 'bob']
+
+console.log((band[0])[0])
