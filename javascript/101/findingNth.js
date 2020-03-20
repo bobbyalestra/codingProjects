@@ -21,9 +21,7 @@ function initials(){
 
 //simplifying and just trying to find numbers
 
-function numbers (){
-numbers = [3,14,53,67,76,77,9]
-
-console.log(numbers[3])
-}
-(numbers());
+let firstName = 'Bobby'
+let lastName = 'Alestra'
+console.log((lastName.length/2))
+console.log(lastName[Math.round(lastName.length/2)])

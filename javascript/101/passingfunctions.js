@@ -7,7 +7,7 @@ function locations(originCity, destinationCity) {
 }
 locations('Falmouth', 'Falmouth')
 
-codc
+
 
 
 function oJldobs(job1, job2, job3, job4,){
@@ -35,3 +35,16 @@ function oldJobs(job1, job2, job3, job4, mentor, institute, originCity){
 oldJobs ('Silver Lounge', 'UPS', 'Dental Assistant', 'Sales Associate');
 
 
+
+//Arnells example
+
+let city1 = "Boston"
+let city2 = "Paris"
+
+
+function traveling(origin, destination){
+   console.log(` you are traveling from ${origin} to ${destination} where there is coronavirus`)
+
+
+}
+traveling(city1, city2);
