@@ -20,9 +20,9 @@ let employee = [['Arnell', 'Bobby', 'Will'], ['Margie', 'Gabby', 'Chelsea'], ['J
    
     
 
-        for (i = 0; i < employee.length ; i++ ){
-    console.log(employee[2][0][0]) 
-}
+        
+    console.log((employee[2][0][4]), departments[2]) 
+    console.log((employee[2][1][2]), departments[2])
     
 
 
