@@ -8,12 +8,11 @@ let employee = [['Arnell', 'Bobby', 'Will'], ['Margie', 'Gabby', 'Chelsea'], ['J
     console.log((employee[1]) , departments[1])
     console.log((employee[2]) , departments[2])
 
-
+// 2
     console.log((employee[0][1]) , departments[0])
     console.log((employee[1][1]) , departments[1])
     console.log((employee[2][1]) , departments[2])
-
- // extra credit???
+// 3
     console.log((employee[2][0][0]) , departments[2])
     console.log((employee[2][1][0]) , departments[2])
     
