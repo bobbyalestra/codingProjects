@@ -10,7 +10,7 @@ locations('Falmouth', 'Falmouth')
 
 
 
-function oJldobs(job1, job2, job3, job4,){
+function oldJobs(job1, job2, job3, job4,){
    let originCity = "Falmouth"
    let mentor = "Matthew Joseph"
    let institute = "CareerDevs"
