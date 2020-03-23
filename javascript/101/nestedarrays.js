@@ -13,17 +13,17 @@ let employee = [['Arnell', 'Bobby', 'Will'], ['Margie', 'Gabby', 'Chelsea'], ['J
     console.log((employee[1][1]) , departments[1])
     console.log((employee[2][1]) , departments[2])
 
-
+ // extra credit???
     console.log((employee[2][0][0]) , departments[2])
     console.log((employee[2][1][0]) , departments[2])
     
    
     
 
-        
-    console.log((employee[2][0][4]), departments[2]) 
-    console.log((employee[2][1][2]), departments[2])
-    
+        //extra credit?
+    console.log((employee[2][0][4]), departments[2]) // logs the last letter of the last array of arrays 
+    console.log((employee[2][1][2]), departments[2]) // logs the last  letter of the second variable in the last array
+    var lastLetterOfLastName = lastName[lastName.length - 1];
 
 
     // adding th [0] will choose first array. adding the second [0] will choose first element in array third[0] selects first character in element.
