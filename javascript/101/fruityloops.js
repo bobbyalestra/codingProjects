@@ -20,7 +20,6 @@ while(0 > n) {
   n - 2;
 }
 
-
 for (i =1; i < 101; i+=2){
     console.log([i])
 }

@@ -1,25 +1,28 @@
-let x = 7;
-let y = 5;
 
+
+
+let myArray = []
+let x = -1;
+let y = 100
 
 function firstNum(x)
-  function secondNum(y)
-
-while (x = 7, y= 5){
- 
   
-  if (x < y){
-    return true
+{do {
+  x = x +2;
+console.log([x])
+} while (x < 40)
+
+   } function secondNum(y){
+  
+  for (y < 0; y < 10; y++ ){
+  console.log([y])
   }
-  } 
-
-  console.log("true")
+   
+  console.log(secondNum(y));
   
-  firstNum(5);
- secondNum(7);
-  
+  firstNum(1)
+ secondNum(100)
+   }
 
 
-
-
-
+   let num = function(x = 1)
