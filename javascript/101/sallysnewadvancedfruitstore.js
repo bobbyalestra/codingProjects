@@ -1,45 +1,62 @@
-let = securityScanner = {
-    fruitIdScanned: "", // key: Value (property / kv pair)
-    fruitNameScanned: "",
-    fruitIdInBasket: [],
-    fruitNamesInBasket: [],
-    badgeIdOutBuilding: [],
-    fruitsInCart: [],
-    inScan: function() {
-     this.fruitIdInBasket.push(this.fruitIdScanned);
-      this.fruitNamesInBasket.push(this.fruitNameScanned);
-      console.log(`:::::Welcome to Sally's Fruit Mart::::`);
-      console.log(`ID's: ${this.fruitIdInBasket}`);
-      console.log(`All Fruits Scanned: ${this.fruitNamesInBasket}`);
-    },
-    outScan: function() {
-      if (this.fruitIdInBasket == this.badgeIdOutBuilding) {
-        this.badgeIdOutBuilding.push(this.fruitIdScanned);
-        this.fruitsInCart.push(this.fruitNameScanned);
+console.log(`..:::Welcome to Sally's Fruit Mart:::..`),
 
-        console.log(`::::Out The Building::::`);
-        console.log(`ID's: ${this.badgeIdOutBuilding}`);
-        console.log(`ID's: ${this.fruitsInCart}`);
-      } else if (this.fruitIdScanned !== this.badgeIdOutBuilding)
-        console.log(
-          `!!!WARNING ${this.fruitNameScanned} HAS NOT BEEN SCANNED!!!`
-        );
-    }
-  };
-  // end of object
-  function scanId(id, name, inout) {
-    securityScanner.fruitIdScanned = id;
-    securityScanner.fruitNameScanned = name;
-    if (inout == "in") {
-      securityScanner.inScan();
-    } else if (inout !== "in") {
-      securityScanner.outScan();
-    }
+let = itemScanner = {
+  fruitBarCodeScanned: "", // refers to the  parameters of the scanId "id"function
+  fruitNameScanned: "", // refers to the  parameters of the scanId "name"function
+  priceOfFruit: "", // refers to the  parameters of the scanId "price"function
+  amountOfFruit: "", //  // refers to the  parameters of the scanId "amount"function
+  fruitBarCodeInBasket: [],
+  fruitNamesInBasket: [],
+  fruitoutofBasket: [],
+  fruitsInCart: [],
+  allitemsScanned: [],
+  totalFruitPrice : (this.amountOfFruit * this.priceOfFruit),//give me the total cost of the specific item
+  
+  itemsScanned: function() {
+    this.fruitBarCodeInBasket.push(this.fruitBarCodeScanned);
+    this.fruitNamesInBasket.push(this.fruitNameScanned);
+    this.fruitNamesInBasket.push(this.allitemsScanned); // not working 
+    console.log(`Fruit BarCode: ${this.fruitBarCodeScanned}`);
+    console.log(`Fruit Name: ${this.fruitNameScanned}`);
+    console.log(` You Have ${itemScanner.amountOfFruit}, ${this.fruitNameScanned} `)
+
+  },
+  
+  itemsNotScanned: function() {
+    if (this.fruitBarCodeScanned !== this.fruitoutofBasket)
+      console.log(`!!!WARNING ${this.fruitNameScanned} HAS NOT BEEN SCANNED, PLEASE SCAN ITEM!!!!`);
+    },
+    
+  
   }
-  scanId("23456", "Banana", "in");
-  scanId("15754", "Strawberry", "in");
-  scanId("84342", "Grapes", "out");
-  scanId("54528", "Pineapple", "in");
-  scanId("65464", "Raspberries", "in");
-  scanId("18624", "Peaches", "in");
-  scanId("25941", "Watermelon", "out");
+      
+function scanId(id, name, inout, amount, price) {
+  itemScanner.fruitBarCodeScanned = id;
+  itemScanner.fruitNameScanned = name;
+  itemScanner.amountOfFruit = amount;
+  itemScanner.priceOfFruit = price;
+  totalCostOfItem = ((amount) * (price));
+  if (inout == "in") {
+    itemScanner.itemsScanned();
+    console.log(` That Cost a total of ${totalCostOfItem} dollars`) 
+  } else if (inout !== "in") {
+    itemScanner.itemsNotScanned();
+  } 
+  console.log(` ${""} `);
+ }
+
+
+ 
+scanId("23456", "Bananas", "in", 3,4);
+scanId("15754", "Strawberry", "in", 2,3);
+scanId("54528", "Pineapple", "in", 1,5);
+scanId("65464", "Raspberries", "in", 5 ,2);
+scanId("18624", "Peaches", "in", 4, 4);
+
+console.log()
+console.log (` <..::THANK YOU FOR SHOPPING AT SALLY'S::..> `);
+console.log(` ${""} `);
+scanId("25941", "Watermelon", "out", 1,3);
+scanId("84342", "Grapes", "out", 1,2);
+
+
