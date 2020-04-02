@@ -1,60 +1,55 @@
-let securityScanner = {
+console.log(`..:::Welcome to Sally's Fruit Mart:::..`),
 
-  currentBadgeIdScanned: "",
-  currentEmployeeNameScanned : "",
-  badgeIdsInBuilding : [],
-  employeeNamesInBuilding : [],
-  badgeIdsOutBuilding : [],
-  employeeNamesOutBuilding : [],
- 
-inScan: function(){ //in scan equals a method
-    this.badgeIdsInBuilding.push(securityScanner.currentBadgeIdScanned);
-    this.employeeNamesInBuilding.push(securityScanner.currentEmployeeNameScanned)
+let = securityScanner = {
+  fruitIdScanned: "", // key: Value (property / kv pair)
+  fruitNameScanned: "",
+  fruitIdInBasket: [],
+  fruitNamesInBasket: [],
+  fruitoutofBasket: [],
+  fruitsInCart: [],
+  allFruitScanned: [],
 
-  console.log(`..:::::In The Building:::::..`);
-  console.log(` ID's: ${this.badgeIdsInBuilding}`);
-  console.log(` Name's: ${this.currentEmployeeNameScanned}`)
+  inScan: function() {
+    this.fruitIdInBasket.push(this.fruitIdScanned);
+    this.fruitNamesInBasket.push(this.fruitNameScanned);
+    this.allFruitScanned.push(this.fruitNamesInBasket);
+    console.log(`Fruit Id'ss: ${this.fruitIdScanned}`);
+    console.log(`Fruit Names: ${this.fruitNameScanned}`);
+   
+  },
   
-},
-  outScan: function(){ 
-      this.badgeIdsOutBuilding.push(securityScanner.currentBadgeIdScanned);
-      this.employeeNamesOutBuilding.push(securityScanner.currentEmployeeNameScanned);
+  outScan: function() {
+    if (this.fruitIdInBasket == this.fruitoutofBasket) {
+      this.fruitoutofBasket.push(this.fruitIdScanned);
+      this.fruitsInCart.push(this.fruitNameScanned);
 
-  console.log(`..:::::Out of The Building:::::..`);
-  console.log(` ID's: ${this.badgeIdsOutBuilding}`);
-  console.log(` Name's: ${this.employeeNamesOutBuilding}`);
+      console.log(`::::Not Yet Scanned::::`);
+      console.log(` Fruity ID's: ${this.fruitoutofBasket}`);
+      console.log(`Fruity name's: ${this.fruitsInCart}`);
+    } else if (this.fruitIdScanned !== this.fruitoutofBasket)
+      console.log(`!!!WARNING ${this.fruitNameScanned} HAS NOT BEEN SCANNED!!!`);
+    }
+    }
+      
 
-function scanId(inout, id, name){
-
-securityScanner.currentBadgeIdScanned = id;
-securityScanner.currentEmployeeNameScanned = name;
-securityScanner.inside = inout;
-securityScanner.outside = inout;
-
-
-if (inout == "in"){
-  securityScanner.inScan();
-}   else (inout == "out")
-    securityScanner.outScan()
-}
-
-
-
-scanId("12345", "Arneezy", "in");
-scanId("12345", "Arneezy", "out");
-scanId("56692", "Jamie", "in");
-scanId("56692", "Jamie", "out");
-scanId("78447", "Bobby", "in");
-scanId("78447", "Bobby", "out");
-scanId("47894", "Margie", "in");
-scanId("47894", "Margie", "out");
-scanId("14514", "Chelsea", "in");
-scanId("14514", "Chelsea", "out");
-scanId("69856", "Joe", "in");
-scanId("69856", "Joe", "out");
-scanId("87234", "Lord 9th", "in");
-scanId("87234", "Lord 9th", "out");
-
-
+// end of object
+function scanId(id, name, inout) {
+  securityScanner.fruitIdScanned = id;
+  securityScanner.fruitNameScanned = name;
+  if (inout == "in") {
+    securityScanner.inScan();
+  } else if (inout !== "in") {
+    securityScanner.outScan();
   }
+ 
 }
+
+
+
+scanId("23456", "Banana", "in");
+scanId("15754", "Strawberry", "in");
+scanId("54528", "Pineapple", "in");
+scanId("65464", "Raspberries", "in");
+scanId("18624", "Peaches", "in");
+scanId("25941", "Watermelon", "out");
+scanId("84342", "Grapes", "out");
