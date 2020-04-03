@@ -12,10 +12,15 @@ let = itemScanner = {
   allitemsScanned: [],
   totalFruitPrice : (this.amountOfFruit * this.priceOfFruit),//give me the total cost of the specific item
   
+  
+  //         NEED HELP BELOW
+  totalOfAllSales : (this.totalFruitPrice + this.totalFruitPrice ), // not working
+  
+  
   itemsScanned: function() {
     this.fruitBarCodeInBasket.push(this.fruitBarCodeScanned);
     this.fruitNamesInBasket.push(this.fruitNameScanned);
-    this.fruitNamesInBasket.push(this.allitemsScanned); // not working 
+     
     console.log(`Fruit BarCode: ${this.fruitBarCodeScanned}`);
     console.log(`Fruit Name: ${this.fruitNameScanned}`);
     console.log(` You Have ${itemScanner.amountOfFruit}, ${this.fruitNameScanned} `)
@@ -36,14 +41,17 @@ function scanId(id, name, inout, amount, price) {
   itemScanner.amountOfFruit = amount;
   itemScanner.priceOfFruit = price;
   totalCostOfItem = ((amount) * (price));
+  
   if (inout == "in") {
     itemScanner.itemsScanned();
-    console.log(` That Cost a total of ${totalCostOfItem} dollars`) 
+   
+    
   } else if (inout !== "in") {
     itemScanner.itemsNotScanned();
   } 
   console.log(` ${""} `);
- }
+   
+}
 
 
  
@@ -53,9 +61,14 @@ scanId("54528", "Pineapple", "in", 1,5);
 scanId("65464", "Raspberries", "in", 5 ,2);
 scanId("18624", "Peaches", "in", 4, 4);
 
-console.log()
+
 console.log (` <..::THANK YOU FOR SHOPPING AT SALLY'S::..> `);
+console.log(` ${""} `); // adding a space
+console.log(` That Cost a total cost  of your groceries is ${itemScanner.totalFruitPrice} dollars`) 
 console.log(` ${""} `);
+
+
+//            NOT SCANNED YET
 scanId("25941", "Watermelon", "out", 1,3);
 scanId("84342", "Grapes", "out", 1,2);
 
