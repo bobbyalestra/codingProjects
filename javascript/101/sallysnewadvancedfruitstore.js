@@ -14,7 +14,8 @@ let = itemScanner = {
   
   
   //         NEED HELP BELOW
-  
+  totalOfAllSales : (this.totalFruitPrice + this.totalFruitPrice ), // not working
+
   
   
   itemsScanned: function() {
