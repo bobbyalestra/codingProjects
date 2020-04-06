@@ -20,3 +20,5 @@ function favoriteBeaches(beach1, beach2, beach3, beach4, beach5){
     }
  }
  console.log("heres a list of my favorite beaches", [extraBeaches], "The Heights") 
+
+ //ddfsgdfgsdfgsdfg

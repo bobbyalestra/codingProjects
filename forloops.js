@@ -152,7 +152,3 @@ console.log(places) //will display all variables are in array
 
 
 }
-
-
-
-//sdfdsfdsarsdfvdfvdfvdfv
