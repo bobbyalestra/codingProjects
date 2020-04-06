@@ -1,6 +1,6 @@
 //freecodecamp
 var ourArray = [];
-var i = 0;
+var i = 0;remogit
 while(i < 5) {
   ourArray.push(i);
   i++;
