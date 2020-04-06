@@ -14,7 +14,7 @@ let = itemScanner = {
   
   
   //         NEED HELP BELOW
-  totalOfAllSales : (this.totalFruitPrice + this.totalFruitPrice ), // not working
+  
   
   
   itemsScanned: function() {
@@ -73,4 +73,3 @@ scanId("25941", "Watermelon", "out", 1,3);
 scanId("84342", "Grapes", "out", 1,2);
 
 
-//
