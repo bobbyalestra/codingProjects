@@ -1,12 +1,23 @@
 
 
 
-.body {
-  background-color : royalblue;
+body {
+  background-color: gray;
   font-family: sans-serif;
+
 }
 
-.h1{
+
+h3{ 
+font-size: large;
+font-family: sans-serif;
+color : blue
+}
+
+
+
+h1{
+  color: cyan ;
   font-family: sans-serif;
 }
 /* Dropdown Button */
