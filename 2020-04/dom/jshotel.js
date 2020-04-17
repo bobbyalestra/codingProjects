@@ -17,3 +17,22 @@ function myFunction() {
       }
     }
   }
+
+
+  function myFunction1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(events) {
+    if (!events.target.matches('.dropbtn')) {
+      var dropdowns1 = document.getElementsByClassName("dropdown1-content");
+      var i;
+      for (i = 0; i < dropdowns1.length; i++) {
+        var openDropdown1 = dropdowns[i];
+        if (openDropdown1.classList.contains('show')) {
+          openDropdown1.classList.remove('show');
+        }
+      }
+    }
+  }
