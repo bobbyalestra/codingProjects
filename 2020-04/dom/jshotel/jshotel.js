@@ -1,11 +1,4 @@
 
-let object= {
-  slogan : "I AM THE HACKER"
-}
-
-
-
-
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -15,7 +8,7 @@ function myFunction() {
   // Close the dropdown menu if the user clicks outside of it
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var dropdowns = document.getElementsByClassName("dropdown-content.show {display:block;}");
       var i;
       for (i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];
@@ -34,7 +27,7 @@ function myFunction() {
   // Close the dropdown menu if the user clicks outside of it
   window.onclick = function(events) {
     if (!events.target.matches('.dropbtn')) {
-      var dropdowns1 = document.getElementsByClassName("dropdown1-content");
+      var dropdowns1 = document.getElementsByClassName("dropdown1-content.show {display:block;}");
       var i;
       for (i = 0; i < dropdowns1.length; i++) {
         var openDropdown1 = dropdowns[i];
