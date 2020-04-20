@@ -4,6 +4,9 @@
 
 body{
     background-color: khaki;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    color:blue;
 }
 
 #content{
@@ -19,7 +22,7 @@ body{
 
 
     /* these conditions are for hiding the contents and allowing you to click the show more to expand the box */
-    max-height: 270px;
+    max-height: 100px;
     overflow: hidden;
     
 -webkit-transition: max-height 0.7s;
