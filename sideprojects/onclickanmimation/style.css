@@ -1,0 +1,32 @@
+
+
+body{
+    background-color: khaki;
+    font-size: 48px;
+    text-align: center;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing : border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+#btn{
+    width: 140px;
+    height: 89px;
+    background-color: red;
+    color: white;
+    border: 1px solid;
+    border-radius : 10px;
+    font-size: 22px;
+    line-height: 54px;
+    text-align : center;
+    box-shadow : 0px 0px 4px 2px red;
+    margin :20px auto;
+
+}
