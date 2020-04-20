@@ -10,18 +10,33 @@
     <body>
 Trying out the onClick function with some animation
 
-<div id = "btn">
+<div class = "btn" onClick = "ani()">
     Start    
 </div>
 
-<div id = "btn">
+<div class = "btn" onClick = "ani2()">
         Exit
 </div>
+
+
 <div id = "anonymus">
     ..::I DID IT::..
 </div>
 
 
-<script type = "text/javascript"></script>
-    </body>
+<script type = "text/javascript">
+
+function ani() {
+
+    document.getElementById('anonymus').style.display = 'block';
+}
+function ani2(){
+    document.getElementById('anonymus').style.display = 'none';
+}
+
+</script>
+  
+
+
+</body>
 </html>

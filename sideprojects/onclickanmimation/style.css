@@ -16,7 +16,7 @@ body{
 
 }
 
-#btn{
+.btn{
     width: 140px;
     height: 89px;
     background-color: red;
@@ -29,7 +29,17 @@ body{
     box-shadow : 0px 0px 4px 2px red;
     margin :20px auto;
     font-weight: 700;
+    transition: all 0.3s;
+    
 }
+
+.btn:active{
+    background-color: rgb(117, 216, 19);
+}
+
+
+
+
 #anonymus{
     width: 300px;
     height: 200px;
@@ -41,13 +51,14 @@ body{
     line-height: 198px;
     box-shadow : 0px 0px 8px 4px orange;
     margin: 150 auto;
-
+    animation : aniset 1.5s 1s infinite ease-in-out; 
+    display: none
 }
 @keyframes aniset{
     0%{ transform: rotate(0deg);
 
     }
-    20%{transform: rotate(1000deg);
+    20%{transform: rotate(100deg);
 
     }40%{transform: rotate(200deg);
 
