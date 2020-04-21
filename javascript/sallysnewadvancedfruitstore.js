@@ -54,6 +54,12 @@ function scanId(id, name, inout, amount, price) {
    
 }
 
+// will cauase it to be undefined
+
+// function total(){
+//  totalP= itemScanner.totalFruitPrice + itemScanner.totalFruitPrice;
+//  return totalP ;
+// }
 
  
 scanId("23456", "Bananas", "in", 3,4);
@@ -65,7 +71,7 @@ scanId("18624", "Peaches", "in", 4, 4);
 
 console.log (` <..::THANK YOU FOR SHOPPING AT SALLY'S::..> `);
 console.log(` ${""} `); // adding a space
-console.log(` That Cost a total cost  of your groceries is ${itemScanner.totalOfAllSales} dollars`) 
+console.log(` That Cost a total cost  of your groceries is ${itemScanner.totalP} dollars`) 
 console.log(` ${""} `);
 
 
@@ -74,5 +80,5 @@ scanId("25941", "Watermelon", "out", 1,3);
 scanId("84342", "Grapes", "out", 1,2);
 
 // 
-
+total();
 //s
