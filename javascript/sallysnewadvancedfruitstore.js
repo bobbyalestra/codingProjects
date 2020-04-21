@@ -14,7 +14,7 @@ let = itemScanner = {
   
   
   //         NEED HELP BELOW
-  totalOfAllSales : (this.totalFruitPrice + this.totalFruitPrice ), // not working
+  totalOfAllSales : this.totalFruitPrice + this.totalFruitPrice, // not working
 
   
   
@@ -65,7 +65,7 @@ scanId("18624", "Peaches", "in", 4, 4);
 
 console.log (` <..::THANK YOU FOR SHOPPING AT SALLY'S::..> `);
 console.log(` ${""} `); // adding a space
-console.log(` That Cost a total cost  of your groceries is ${itemScanner.totalFruitPrice} dollars`) 
+console.log(` That Cost a total cost  of your groceries is ${itemScanner.totalOfAllSales} dollars`) 
 console.log(` ${""} `);
 
 
