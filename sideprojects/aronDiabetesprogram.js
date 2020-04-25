@@ -10,7 +10,7 @@ let = itemScanner = {
   lowBGlevel: [],
   highBGlevel: [],
   allitemsScanned: [],
-  totalmathdone : (this.targetBG * this.currentBG),//give me the total cost of the specific item
+  totalmathdone : (this.targetBG * this.currentBG),//give me the total of the specific item
   
   
   //         NEED HELP BELOW
@@ -24,7 +24,7 @@ let = itemScanner = {
      
     console.log(`Time: ${this.todaysTime}`);
     console.log(`Today is: ${this.todaysDay}`);
-    console.log(` Arons BG levels were ${itemScanner.targetBG}, on ${this.todaysDay} `)
+    console.log(` Arons BG levels were ${itemScanner.targetBG}, on ${this.todaysDay} with a correction factor of `)
 
   },
   
@@ -35,14 +35,23 @@ let = itemScanner = {
     
   
   }
-      
+
+  
+  
+let targetLvl = 180
+
+
+
 function scanId(id, name, inout, amount, price) {
   itemScanner.todaysTime = id;
   itemScanner.todaysDay = name;
   itemScanner.targetBG = amount;
   itemScanner.currentBG = price;
   totalCostOfItem = (((amount) - (price)) / 350);
-  
+  correctionCarbFormula = ((amount - 180) /350 )
+
+
+
   if (inout == "in") {
     itemScanner.itemsScanned();
    console.log(totalCostOfItem)
@@ -62,21 +71,25 @@ function scanId(id, name, inout, amount, price) {
 // }
 
  
-scanId("730", "Monday", "in", 150, 465);
-scanId("1000", "Tuesday", "in", 180,387);
-scanId("1300", "Wedneday", "in", 167,435);
-scanId("1600", "Thursday", "in", 5 ,2);
-scanId("1900", "Friday", "in", 4, 4);
-
+scanId("730", "Monday", "in", 465, 150);
+scanId("1000", "Tuesday", "in",387, 150);
+scanId("1500", "Wedneday", "in", 435, 150);
+scanId("1600", "Thursday", "in",  512, 150);
+scanId("1900", "Friday", "in", 416, 150);
+scanId("1600", "Sat5urday", "in",  512, 150);
+scanId("1900", "Sunday", "in", 416, 150);
 
 console.log (` <..::THERE IS NOTHING IN THE WORLD MOMMY AND DADDY WOULDNT DO FOR YOU!::..> `);
 console.log(` ${""} `); // adding a space
 // console.log(` That Cost a total cost  of your groceries is ${itemScanner.totalP} dollars`) 
+
 console.log(` ${""} `);
 
 
 //            NOT SCANNED YET
-scanId("25941", "Watermelon", "out", 1,3);
-scanId("84342", "Grapes", "out", 1,2);
+
+
+
+
 
 
