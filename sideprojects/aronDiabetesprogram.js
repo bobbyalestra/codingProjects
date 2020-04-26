@@ -1,6 +1,6 @@
 console.log(`..:::MOMMY AND DADDY LOVE YOU SO MUCH ARON!!:::..`),
 
-let = itemScanner = {
+let = diabetesScanner = {
   todaysTime: "", // refers to the  parameters of the scanId "id"function
   todaysDay: "", // refers to the  parameters of the scanId "name"function
   currentBG: "", // refers to the  parameters of the scanId "price"function
@@ -24,7 +24,7 @@ let = itemScanner = {
      
     console.log(`Time: ${this.todaysTime}`);
     console.log(`Today is: ${this.todaysDay}`);
-    console.log(` Arons BG levels were ${itemScanner.targetBG}, on ${this.todaysDay} with a correction factor of `)
+    console.log(` Arons BG levels were ${diabetesScanner.targetBG}, on ${this.todaysDay} with a correction factor of `)
 
   },
   
@@ -38,26 +38,26 @@ let = itemScanner = {
 
   
   
-let targetLvl = 180
+
 
 
 
 function scanId(id, name, inout, amount, price) {
-  itemScanner.todaysTime = id;
-  itemScanner.todaysDay = name;
-  itemScanner.targetBG = amount;
-  itemScanner.currentBG = price;
+  diabetesScanner.todaysTime = id;
+  diabetesScanner.todaysDay = name;
+  diabetesScanner.targetBG = amount;
+  diabetesScanner.currentBG = price;
   totalCostOfItem = (((amount) - (price)) / 350);
   correctionCarbFormula = ((amount - 180) /350 )
 
 
 
   if (inout == "in") {
-    itemScanner.itemsScanned();
+    diabetesScanner.itemsScanned();
    console.log(totalCostOfItem)
     
   } else if (inout !== "in") {
-    itemScanner.itemsNotScanned();
+    diabetesScanner.itemsNotScanned();
   } 
   console.log(` ${""} `);
    
@@ -66,7 +66,7 @@ function scanId(id, name, inout, amount, price) {
 // will cauase it to be undefined
 
 // function total(){
-//  totalP= itemScanner.totalmathdone + itemScanner.totalmathdone;
+//  totalP= diabetesScanner.totalmathdone + diabetesScanner.totalmathdone;
 //  return totalP ;
 // }
 
@@ -85,20 +85,21 @@ console.log(` ${""} `); // adding a space
 console.log(` ${""} `);
 
 
-//            NOT SCANNED YET
+//            1000 current 1111
 
 
 
     
   function price() {
     
-    var sqBn = document.priceCalc.bgLevels;
-    var Amt = document.priceCalc.number;
+    // let sqBn = document.priceCalc.bgLevels;
+    let Amt = document.priceCalc.number;
     
-    var price = ((Amt.value -sqBn.value) /350);
+     let price = ((Amt.value -150) /350);
     
     alert(price);
 }
+
 
 
 
