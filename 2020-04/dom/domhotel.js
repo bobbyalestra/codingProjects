@@ -2,7 +2,7 @@ document.getElementById('slogan').innerText = 'Vitory';
 document.getElementById('hotelName').innerText = 'The DOM Hotel'
 
 
-document.getElementById('availRoomslists"').innerHTML = linesOfHtml;
+document.getElementById('availRoomslists').innerHTML = linesOfHtml;
 
 
 let domHotel ={

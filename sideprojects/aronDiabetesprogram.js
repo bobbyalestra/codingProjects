@@ -81,7 +81,6 @@ scanId("1900", "Sunday", "in", 416, 150);
 
 console.log (` <..::THERE IS NOTHING IN THE WORLD MOMMY AND DADDY WOULDNT DO FOR YOU!::..> `);
 console.log(` ${""} `); // adding a space
-// console.log(` That Cost a total cost  of your groceries is ${itemScanner.totalP} dollars`) 
 
 console.log(` ${""} `);
 
@@ -90,6 +89,16 @@ console.log(` ${""} `);
 
 
 
+    
+  function price() {
+    
+    var sqBn = document.priceCalc.bgLevels;
+    var Amt = document.priceCalc.number;
+    
+    var price = ((Amt.value -sqBn.value) /350);
+    
+    alert(price);
+}
 
 
 
