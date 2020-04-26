@@ -90,16 +90,22 @@ console.log(` ${""} `);
 
 
     
-  function price() {
+  function carbCorrect() {
     
     // let sqBn = document.priceCalc.bgLevels;
     let Amt = document.priceCalc.number;
     
-     let price = ((Amt.value -150) /350);
-    
-    alert(price);
+     let carbCorrect = ((Amt.value -150) /350);
+        
+    alert(carbCorrect);
 }
 
-
-
-
+function insulinCarbCorrect() {
+    
+  // let sqBn = document.priceCalc.bgLevels;
+  let Amt = document.priceCalc.number;
+  
+   let insulinCarbCorrect = ((Amt.value -150) /350);
+      
+  alert(insulinCarbCorrect);
+}
