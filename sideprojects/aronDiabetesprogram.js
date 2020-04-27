@@ -107,7 +107,6 @@ console.log(` ${""} `);
        
 //    alert(insulinCarbCorrect);
 //  
-  }
 
 
 
