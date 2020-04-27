@@ -3,14 +3,14 @@ console.log(`..:::MOMMY AND DADDY LOVE YOU SO MUCH ARON!!:::..`),
 let = diabetesScanner = {
   todaysTime: "", // refers to the  parameters of the scanId "id"function
   todaysDay: "", // refers to the  parameters of the scanId "name"function
-  currentBG: "", // refers to the  parameters of the scanId "price"function
-  targetBG: "", //  // refers to the  parameters of the scanId "amount"function
+  currentBG: "", // refers to the  parameters of the scanId "carbCorrection"function
+  currentBG: "", //  // refers to the  parameters of the scanId "amount"function
   todaysTimesingroup: [],
   todaysDayingroup: [],
   lowBGlevel: [],
   highBGlevel: [],
   allitemsScanned: [],
-  totalmathdone : (this.targetBG * this.currentBG),//give me the total of the specific item
+  totalmathdone : (this.currentBG * this.currentBG),//give me the total of the specific item
   
   
   //         NEED HELP BELOW
@@ -24,7 +24,7 @@ let = diabetesScanner = {
      
     console.log(`Time: ${this.todaysTime}`);
     console.log(`Today is: ${this.todaysDay}`);
-    console.log(` Arons BG levels were ${diabetesScanner.targetBG}, on ${this.todaysDay} with a correction factor of `)
+    console.log(` Arons BG levels were ${diabetesScanner.currentBG}, on ${this.todaysDay} with a correction factor of `)
 
   },
   
@@ -42,12 +42,12 @@ let = diabetesScanner = {
 
 
 
-function scanId(id, name, inout, amount, price) {
+function scanId(id, name, inout, amount, carbCorrection) {
   diabetesScanner.todaysTime = id;
   diabetesScanner.todaysDay = name;
-  diabetesScanner.targetBG = amount;
-  diabetesScanner.currentBG = price;
-  totalCostOfItem = (((amount) - (price)) / 350);
+  diabetesScanner.currentBG = amount;
+  diabetesScanner.currentBG = carbCorrection;
+  totalCostOfItem = (((amount) - (carbCorrection)) / 350);
   correctionCarbFormula = ((amount - 180) /350 )
 
 
@@ -76,7 +76,7 @@ scanId("1000", "Tuesday", "in",387, 150);
 scanId("1500", "Wedneday", "in", 435, 150);
 scanId("1600", "Thursday", "in",  512, 150);
 scanId("1900", "Friday", "in", 416, 150);
-scanId("1600", "Sat5urday", "in",  512, 150);
+scanId("1600", "Saturday", "in",  512, 150);
 scanId("1900", "Sunday", "in", 416, 150);
 
 console.log (` <..::THERE IS NOTHING IN THE WORLD MOMMY AND DADDY WOULDNT DO FOR YOU!::..> `);
@@ -87,25 +87,39 @@ console.log(` ${""} `);
 
 //            1000 current 1111
 
-
+// car decrease 350 -325
 
     
   function carbCorrect() {
     
-    // let sqBn = document.priceCalc.bgLevels;
-    let Amt = document.priceCalc.number;
+    // let currentBG = document.carbCorrectionCalc.bgLevels;
+    let currentBG = document.carbCorrectionCalc.number;
     
-     let carbCorrect = ((Amt.value -150) /350);
+     let carbCorrect = ((currentBG.value -150) /325);
         
     alert(carbCorrect);
-}
 
-function insulinCarbCorrect() {
-    
-  // let sqBn = document.priceCalc.bgLevels;
-  let Amt = document.priceCalc.number;
+
+
+    function carbCover() {
+
+      let carbCover = document.carbCover.carb; 
+
+       insulinToCarbCorrect = (totalCarbs/ insulinCarbRatio);
+      alert(carbCover);
+
+    }
+
+//      insulinTotal = carbCorrect 
   
-   let insulinCarbCorrect = ((Amt.value -150) /350);
-      
-  alert(insulinCarbCorrect);
-}
+//     let insulinCarbCorrect = ((currentBG.value -150) /350);
+       
+//    alert(insulinCarbCorrect);
+//  
+  }
+
+
+
+
+
+
