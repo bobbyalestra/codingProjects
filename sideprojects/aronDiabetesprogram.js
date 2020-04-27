@@ -92,15 +92,16 @@ console.log(` ${""} `);
      let carbCorrect = ((currentBG.value -150) /325);
         
     alert(carbCorrect);
-
-
+  }
+function carbCover(totalCarbs, insulinCarbRatio){
       let carbCover = document.carbCover.carb; 
 
        insulinToCarbCorrect = (totalCarbs / insulinCarbRatio);
       alert(carbCover);
 
-    }
-
+     totalCarbs = 55;
+     insulinCarbRatio = 180
+  }
 //      insulinTotal = carbCorrect 
   
 //     let insulinCarbCorrect = ((currentBG.value -150) /350);
