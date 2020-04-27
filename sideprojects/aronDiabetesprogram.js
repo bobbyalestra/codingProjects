@@ -36,13 +36,7 @@ let = diabetesScanner = {
   
   }
 
-  
-  
-
-
-
-
-function scanId(id, name, inout, amount, carbCorrection) {
+  function scanId(id, name, inout, amount, carbCorrection) {
   diabetesScanner.todaysTime = id;
   diabetesScanner.todaysDay = name;
   diabetesScanner.currentBG = amount;
@@ -63,7 +57,7 @@ function scanId(id, name, inout, amount, carbCorrection) {
    
 }
 
-// will cauase it to be undefined
+// will cause it to be undefined
 
 // function total(){
 //  totalP= diabetesScanner.totalmathdone + diabetesScanner.totalmathdone;
@@ -100,12 +94,9 @@ console.log(` ${""} `);
     alert(carbCorrect);
 
 
-
-    function carbCover() {
-
       let carbCover = document.carbCover.carb; 
 
-       insulinToCarbCorrect = (totalCarbs/ insulinCarbRatio);
+       insulinToCarbCorrect = (totalCarbs / insulinCarbRatio);
       alert(carbCover);
 
     }
