@@ -102,12 +102,7 @@ function carbCover(totalCarbs, insulinCarbRatio){
      totalCarbs = 55;
      insulinCarbRatio = 180
   }
-//      insulinTotal = carbCorrect 
-  
-//     let insulinCarbCorrect = ((currentBG.value -150) /350);
-       
-//    alert(insulinCarbCorrect);
-//  
+
 
 
 
