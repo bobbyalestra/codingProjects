@@ -102,10 +102,3 @@ function carbCover(totalCarbs, insulinCarbRatio){
      totalCarbs = 55;
      insulinCarbRatio = 180
   }
-
-
-
-
-
-
-

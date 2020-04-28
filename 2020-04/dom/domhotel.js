@@ -12,6 +12,14 @@ let domHotel ={
 
   availableRooms : [101, 102, 103, 104],
     roomType : ['singles', 'Doubles', 'Queen', 'King'],
+currentRoomBooked: [],
+currentFloorBooked: [],
+
+bookRooms: function () {
+  this.availableRooms[this.currentFloorBooked].splice(this.availableRooms[this.currentFloorBooked].indexOf(this.currentRoomBooked), 1);
+  this.bookedRooms
+  
+}
 
 }
 
