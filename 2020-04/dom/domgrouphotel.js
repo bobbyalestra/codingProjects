@@ -33,5 +33,5 @@ let hotel = {
 }
 hotel.updateAvailableRoom();
 hotel.completeBookedRoomsArrays();
-hotel.updateBookedRoom();
+ hotel.updateBookedRoom();
 console.log(document.getElementById("dropDownAvailable"))
