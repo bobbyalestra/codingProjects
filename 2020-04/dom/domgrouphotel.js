@@ -15,9 +15,15 @@ let hotel = {
       for (let i = 0; i < this.availableRooms.length; i++) {
         for (let j = 0; j < this.availableRooms[i].length; j++) {
             
+if (selectedRoom == this.availableRooms[i][j]){
+    this.availableRooms[i].splice(this.availableRooms(indexOf(selectedRoom)))
+}
+
+
         }
     }
-      this.availableRooms.splice(this.availableRooms(indexOf(selectedRoom)))
+
+     
 
     },
 
