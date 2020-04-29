@@ -16,14 +16,15 @@ let hotel = {
         for (let j = 0; j < this.availableRooms[i].length; j++) {
             
 if (selectedRoom == this.availableRooms[i][j]){
-    this.availableRooms[i].splice(this.availableRooms(indexOf(selectedRoom)))
+    this.bookedRooms[i].push(this.availableRooms[i].splice(this.availableRooms[i].indexOf(selectedRoom),1))
 }
 
 
         }
     }
 
-     
+     this.updateAvailableRoom();
+     this.updateBookedRoom();
 
     },
 
