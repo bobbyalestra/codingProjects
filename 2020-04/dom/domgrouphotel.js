@@ -10,6 +10,17 @@ let hotel = {
             this.bookedRooms.push( [] ); 
         }
     },
+    bookSelectedRoom: function (){
+      let selectRoom =  document.getElementById('availableSelect').value;
+      for (let i = 0; i < this.availableRooms.length; i++) {
+        for (let j = 0; j < this.availableRooms[i].length; j++) {
+            
+        }
+    }
+      this.availableRooms.splice(this.availableRooms(indexOf(selectedRoom)))
+
+    },
+
     updateAvailableRoom: function() {
         let dropdown = '<select id = "availableSelect">';
         for (let i = 0; i < this.availableRooms.length; i++) {
