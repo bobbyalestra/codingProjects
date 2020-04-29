@@ -11,7 +11,7 @@ let hotel = {
         }
     },
     updateAvailableRoom: function() {
-        let dropdown = '<select>';
+        let dropdown = '<select id = "availableSelect">';
         for (let i = 0; i < this.availableRooms.length; i++) {
             for (let j = 0; j < this.availableRooms[i].length; j++) {
                 dropdown = dropdown + `<option value="${this.availableRooms[i][j]}">${this.availableRooms[i][j]}</option>`;
