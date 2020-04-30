@@ -23,28 +23,22 @@ let hotel = {
     for (let i = 0; i < this.availableRooms.length; i++) {
       for (let j = 0; j < this.availableRooms[i].length; j++) {
         if (selectedRoom === this.availableRooms[i][j]) {
-
-            
-          this.bookedRooms[i].push(
-            this.availableRooms[i].splice(
-              this.availableRooms[i].indexOf(selectedRoom), 1));
-     }
-    }
+           this.bookedRooms[i].push(this.availableRooms[i].splice(this.availableRooms[i].indexOf(selectedRoom), 1));
+        }
+      }
     }
     this.updateAvailableRooms();
     this.updateBookedRooms();
   },
+  
   unBookSelectedRoom: function () {
     let selectedRoom = parseInt(
-      document.getElementById("unBookedSelect").value
-    );
+      document.getElementById("unBookedSelect").value);
     console.log(selectedRoom);
     for (let i = 0; i < this.bookedRooms.length; i++) {
       for (let j = 0; j < this.bookedRooms[i].length; j++) {
         if (selectedRoom == this.bookedRooms[i][j]) {
-          this.availableRooms[i].push(
-            this.bookedRooms[i].splice(
-              this.bookedRooms[i].indexOf(this.bookedRooms[i][j]),1));
+          this.availableRooms[i].push(this.bookedRooms[i].splice(this.bookedRooms[i].indexOf(this.bookedRooms[i][j]),1));
         }
       }
     }
