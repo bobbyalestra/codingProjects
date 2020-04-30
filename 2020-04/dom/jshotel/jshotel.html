@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 
+<html lang="en">
 <head>
-
-    <title> JS Hotel </title>
-    
-
-   
-    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
@@ -16,22 +11,44 @@
   </head>
   
   
-  <label>Email:</label>
+<label>Email:</label>
   <input type="text" id="email" name="email">
-
-
   <input type="submit" name="submit" value="Submit">
 
 <label for="name">Name:</label>
-<input type="text" id="name" name="name">
-<input type="submit" name="submit" value="Submit">
+  <input type="text" id="name" name="name">
+  <input type="submit" name="submit" value="Submit">
 
 
 
     <body> 
     
+ 
+ <div id = "menu"> </div>
+ <div id = "header"> </div>
+      <h1 id = "hotelName"></h1>
+      <h4 id = "slogan"></h4>
+    </div>
+ 
+      <h5>Available Rooms</h5>
+ <div if = "dropDownAvailable"></div>
+    <button onclick="hotel.bookSelectedRoom()">Book Room</button>
+      <h5>Booked Rooms</h5>
+      <div id = "dropDownBooked"></div>
+      <button onclick ="hotel.unBookSelectedRoom()">UnBook Room</button>
 
-      <div class="dropdown">
+      <script src ="jshotel.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+      <!-- old code -->
+
+      <!-- <div class="dropdown">
         <button class="dropbtn">Rooms</button>
         <div class="dropdown-content">
           <a href="#">Room 101</a>
@@ -40,7 +57,7 @@
           <a href="#">Room 104</a>
           <a href="#">Room 105</a>
         </div>
-      </div>
+      </div> -->
 
 
       <div class="dropdown">
