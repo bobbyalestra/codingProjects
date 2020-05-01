@@ -66,20 +66,19 @@ updateAvailableRooms: function (){
     document.getElementById("dropDownBooked").innerHTML = dropDown;
   },
 
-  updateName: function(){
-    localStorage.setItem('name1', document.getElementById('fName').value);
-    document.getElementById("firstName").innerText = localStorage.getItem('name1');
+updateName: function (){
+  localStorage.setItem('name', document.getElementById('fName').value);
+  document.getElementById("firstName").innerText = localStorage.getItem('name1');
 
-    localStorage.setItem('name2', document.getElementById('lName').value);
-    document.getElementById("lastName").innerText = localStorage.getItem('name2');
+  localStorage.setItem('name2', document.getElementById('lName').value);
+  document.getElementById("lastName"),innerText = localStorage.getItem('name2');
 
- } 
+
+ }
 }
+
 document.getElementById("firstName").innerText = localStorage.getItem('name1');
-
-document.getElementById("lastName").innerText = localStorage.getItem('name2');  
-
-
+document.getElementById("lastName").innerText = localStorage.getItem('name2');
 
  
  hotel.updateAvailableRooms();
