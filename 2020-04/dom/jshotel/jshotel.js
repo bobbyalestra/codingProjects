@@ -13,6 +13,7 @@ let hotel = {
       this.bookedRooms.push([]);
     }
   },
+
 // this will convert the number string variable back into a number
 bookSelectedRoom: function () {
   let selectedRoom = parseInt(document.getElementById("availableSelect").value);
@@ -65,8 +66,22 @@ updateAvailableRooms: function (){
     document.getElementById("dropDownBooked").innerHTML = dropDown;
   },
 
+  updateName: function(){
+    localStorage.setItem('name1', document.getElementById('fName').value);
+    document.getElementById("firstName").innerText = localStorage.getItem('name1');
+
+    localStorage.setItem('name2', document.getElementById('lName').value);
+    document.getElementById("lastName").innerText = localStorage.getItem('name2');
+
+ } 
+}
+document.getElementById("firstName").innerText = localStorage.getItem('name1');
+
+document.getElementById("lastName").innerText = localStorage.getItem('name2');  
+
+
+
  
- }
  hotel.updateAvailableRooms();
  hotel.updateBookedRooms();
  hotel.completeBookedRoomsArrays();
