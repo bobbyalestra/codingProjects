@@ -64,10 +64,10 @@ updateAvailableRooms: function (){
     }
     dropDown = dropDown + "</select>";
     document.getElementById("dropDownBooked").innerHTML = dropDown;
-  },
+  
 
-updateName: function (){
-  localStorage.setItem('name', document.getElementById('fName').value);
+function updateName (){
+  localStorage.setItem('name1', document.getElementById('fName').value);
   document.getElementById("firstName").innerText = localStorage.getItem('name1');
 
   localStorage.setItem('name2', document.getElementById('lName').value);
@@ -75,6 +75,8 @@ updateName: function (){
 
 
  }
+},
+updateName();
 }
 
 document.getElementById("firstName").innerText = localStorage.getItem('name1');

@@ -9,3 +9,4 @@ for(let i = 0; i < carOptions.length; i++) {
 }
 dropDownList = dropDownList + "</select>";
 document.getElementById("carsavail").innerHTML = dropDownList;
+let dog = 1
