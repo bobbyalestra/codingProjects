@@ -24,3 +24,5 @@ let list ='<ul>' ;
 
 document.getElementById('listOfNames').innerText = list;
 
+for (let i = 0 ; i < JSON.parse(loccalstorage.getItem('tArr2').length ); i++);
+
