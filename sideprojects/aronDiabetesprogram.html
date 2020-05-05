@@ -10,8 +10,10 @@ This is a program i created to track my sons Diabetes.
 <title>This is Arons Diabetes App</title>
     <body>
 
-        <h1>
+        <h1 id = 'name'>
+            <div id = 'dropDown'></div>
             I recently found out that my son was diagnose with type one diabetes, so i would do what any father would do in this situation,  with my knowledge and mind I decided to  make an app that would track his blood glucose levels then input the formula to calculate the amount of insulin that he will need to correct the carb count.
+            <div id = 'availableRoomsList'></div>
         </h1>
 
 <p>
@@ -24,14 +26,14 @@ This is a program i created to track my sons Diabetes.
 </p>
 
 <p> 
-    <label for="timeOfDay">Choose The Time of Blood Test:</label>
+    <!-- <label for="timeOfDay">Choose The Time of Blood Test:</label> -->
 
-<select id="timeOfDay">
+<div id="timeOfDay">
   <option value="Morning">Morning</option>
   <option value="Lunch">Lunch</option>
   <option value="Dinner">Dinner</option>
   <option value="beforeBed">Before Bed</option>
-</select>
+</div>
 </p>
 
     </body>

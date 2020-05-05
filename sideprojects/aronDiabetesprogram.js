@@ -1,6 +1,4 @@
-console.log(`..:::MOMMY AND DADDY LOVE YOU SO MUCH ARON!!:::..`),
-
-let = diabetesScanner = {
+ diabetesScanner = {
   todaysTime: "", // refers to the  parameters of the scanId "id"function
   todaysDay: "", // refers to the  parameters of the scanId "name"function
   currentBG: "", // refers to the  parameters of the scanId "carbCorrection"function
@@ -12,13 +10,26 @@ let = diabetesScanner = {
   allitemsScanned: [],
   totalmathdone : (this.currentBG * this.currentBG),//give me the total of the specific item
   
+timeOfDay : ['Morning', 'Afternoon', 'Night', 'Midnight', 'TwoAM' ],
+
   
   //         NEED HELP BELOW
   totalOfAllSales : this.totalmathdone + this.totalmathdone, // not working
 
   
+  setupLocalStorage: function (){
+    if (Boolean(localStorage.getItem('name'))){
+                    
+      let hotelString = localStorage.getItem('name')
+      hotel = JSON.parse(hotelString);
+
+} else{
+      localStorage.setItem('name', JSON.stringify(name));
+  }
+  },
   
   itemsScanned: function() {
+    
     this.todaysTimesingroup.push(this.todaysTime);
     this.todaysDayingroup.push(this.todaysDay);
      
@@ -33,9 +44,24 @@ let = diabetesScanner = {
       console.log(`!!!WARNING ARON HAS HIGH BG!!!`);
     },
     
-  
-  }
 
+  //
+    updateTimeOfDay: function  () {
+               let dropDown = `<select>`;
+              for(i = 0; i <this.timeOfDay.length; i++){
+                  for (j = 0; j <this.timeOfDay[i].length; j++){
+                      dropDown = dropDown + `<option value = '${this.timeOfDay[i]}>'${this.timeOfDay[i]} </option>`
+                  }
+                }
+                  dropDown = `</select>`
+              },
+           
+              
+            }
+              document.getElementById('timeOfDay').innerHTML = dropDown
+        
+  
+  
   function scanId(id, name, inout, amount, carbCorrection) {
   diabetesScanner.todaysTime = id;
   diabetesScanner.todaysDay = name;
@@ -43,7 +69,6 @@ let = diabetesScanner = {
   diabetesScanner.currentBG = carbCorrection;
   totalCostOfItem = (((amount) - (carbCorrection)) / 350);
   correctionCarbFormula = ((amount - 180) /350 )
-
 
 
   if (inout == "in") {
@@ -54,15 +79,10 @@ let = diabetesScanner = {
     diabetesScanner.itemsNotScanned();
   } 
   console.log(` ${""} `);
-   
 }
 
-// will cause it to be undefined
 
-// function total(){
-//  totalP= diabetesScanner.totalmathdone + diabetesScanner.totalmathdone;
-//  return totalP ;
-// }
+dropdown = 
 
  
 scanId("730", "Monday", "in", 465, 150);
