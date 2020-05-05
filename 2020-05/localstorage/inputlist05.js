@@ -24,7 +24,7 @@ function addnameToArray(){
    }
 
    for (i =0; i < oldArrayNames.length; i++ )
-   let htmlText = '<ul>'
+   let htmlText = '<ul>' + `${nameToAdd}`
 
 }
 
