@@ -2,6 +2,7 @@
 let addNames = [];
 console.log('inside JS')
 let parsedFoodArray = [];
+
 let oldArrayNames =[];
 
  oldArrayNames=JSON.parse(localStorage.getItem('arrayNames'));
@@ -9,7 +10,7 @@ let oldArrayNames =[];
 
 
 function addnameToArray(){
-    nameToAdd= document.getElementById('inputBox').value
+    nameToAdd= document.getElementById('inputBox').value;
    if (nameToAdd.length != 0){
 
    
@@ -24,13 +25,13 @@ function addnameToArray(){
     parsedFoodArray = JSON.parse(localStorage.getItem('lsArrayNames'));
    }
    addnameToArray();
-}
+
 
    for (i = 0; i <oldArrayNames.length; i++){
    list = list + `<li>${oldArrayNames[i]}</li>`;
    }
    list = list + '</ul>'
-
+}
 
 
 
