@@ -1,16 +1,16 @@
 let nameArray = [];
 
 
-function addNameToArray() {
-  if (Boolean(localStorage.getItem("lsNameArray"))) {
-    let nameArray = JSON.parse(localStorage.getItem("lsNameArray"));
+function addCarNameToArray() {
+  if (Boolean(localStorage.getItem("lsCarNameArray"))) {
+    let nameArray = JSON.parse(localStorage.getItem("lsCarNameArray"));
    
     let enteredName = document.getElementById("inputbox").value;
     nameArray.push(enteredName);
    
-    localStorage.setItem("lsNameArray", JSON.stringify(nameArray));
+    localStorage.setItem("lsCarNameArray", JSON.stringify(nameArray));
     
-    let liveNameArray = JSON.parse(localStorage.getItem("lsNameArray"));
+    let liveNameArray = JSON.parse(localStorage.getItem("lsCarNameArray"));
     console.log(liveNameArray);
    
     let htmlList = "<ul>";
@@ -19,31 +19,25 @@ function addNameToArray() {
     }
     htmlList = htmlList + "</ul>";
    
-    document.getElementById("listNamesHere").innerHTML = htmlList;
+    document.getElementById("inputbox").innerHTML = htmlList;
   
 } else {
     let enteredName = document.getElementById("inputbox").value;
     nameArray.push(enteredName);
-    localStorage.setItem("lsNameArray", JSON.stringify(nameArray));
-    displayedList();
-    //     let liveNameArray = JSON.parse(localStorage.getItem("lsNameArray"));
-    //     console.log(liveNameArray);
-    //     let htmlList = "<ul>";
-    //     for (let i = 0; i < liveNameArray.length; i++) {
-    //       htmlList = htmlList + `<li>${liveNameArray[i]}</li>`;
-    //     }
-    //     htmlList = htmlList + "</ul>";
-    //     document.getElementById("listNamesHere").innerHTML = htmlList;
-    //   }
+    localStorage.setItem("lsCarNameArray", JSON.stringify(nameArray));
+    displayNameOfCar();
+  
   }
 }
-function displayedList() {
-  let liveNameArray = JSON.parse(localStorage.getItem("lsNameArray"));
-  let htmlList = "<ul>";
+function displayNameOfCar() {
+ 
+  
+   liveNameArray = JSON.parse(localStorage.getItem("lsCarNameArray"));
+   htmlList = "<ul>";
   for (let i = 0; i < liveNameArray.length; i++) {
     htmlList = htmlList + `<li>${liveNameArray[i]}</li>`;
   }
   htmlList = htmlList + "</ul>";
-  document.getElementById("listNamesHere").innerHTML = htmlList;
+  document.getElementById("listOfCars").innerHTML = htmlList;
 }
-displayedList();
+displayNameOfCar();
