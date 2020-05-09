@@ -43,7 +43,7 @@ toggleComplete: function (position){
    let todo= this.todo[position]
    todo.completed = !todo.completed;
    this.displayTodos();
-}
+},
 
 };
 todoList.addTodos('this is an objoect');
