@@ -2,8 +2,6 @@ let todoList ={
     todo: [],
 
 displayTodos: function (){
-console.log("My Todo's : ")
-
 
 if  (this.todo.lengh === 0){
     console.log("My Todo's : ")
@@ -45,6 +43,26 @@ toggleComplete: function (position){
    this.displayTodos();
 },
 
+toggleAll: function(){
+    let totalTodos = this.todo.length;
+    let completedTodos = 0;
+
+    for(let i = 0; i <totalTodos; i++){
+    if (this.todo[i].completed === true){
+        completedTodos++;
+    }
+}
+if(completedTodos === totalTodos){
+    for (let i = 0; i < totalTodos; i++){
+        this.todo[i].completed = false;
+    }
+}
+},
+
+
+
 };
-todoList.addTodos('this is an objoect');
+todoList.toggleComplete(1)
+
+todoList.addTodos('this is an object', 'another', 'more', 'stuff');
 todoList.displayTodos();
