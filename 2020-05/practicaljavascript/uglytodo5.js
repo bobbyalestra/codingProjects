@@ -4,17 +4,20 @@ let todoList ={
 displayTodos: function (){
 
 if  (this.todo.lengh === 0){
-    console.log("My Todo's : ")
+    console.log("Todo list is empty!");
+    }else{
+            console.log("My Todo's : ")
+        }
+    
     for(i = 0; i < this.todo.length; i++){
         console.log(this.todo[i].todoText);
-
         if (this.todo[i].completed ===true){
             console.log('(x)',this.todo[i].todoText);
         }else{
             console.log( '( )' , this.todo[i].todoText);
     }
 }
-}
+
 },
 
 addTodos: function (todoText){
@@ -56,13 +59,19 @@ if(completedTodos === totalTodos){
     for (let i = 0; i < totalTodos; i++){
         this.todo[i].completed = false;
     }
-}
-},
+}else{
+    for (let i = 0; i < totalTodos; i++){
+    this.todo[i].completed = true;
 
+}
+
+}
+}
 
 
 };
 todoList.toggleComplete(1)
 
 todoList.addTodos('this is an object', 'another', 'more', 'stuff');
+
 todoList.displayTodos();
