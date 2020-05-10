@@ -15,9 +15,8 @@ if  (this.todo.lengh === 0){
             console.log('(x)',this.todo[i].todoText);
         }else{
             console.log( '( )' , this.todo[i].todoText);
+        }
     }
-}
-
 },
 
 addTodos: function (todoText){
@@ -62,13 +61,9 @@ if(completedTodos === totalTodos){
 }else{
     for (let i = 0; i < totalTodos; i++){
     this.todo[i].completed = true;
-
-}
-
 }
 }
-
-
+}
 };
 todoList.toggleComplete(1)
 
