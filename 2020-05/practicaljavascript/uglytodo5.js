@@ -2,7 +2,6 @@ let todoList ={
     todo: [],
 
 displayTodos: function (){
-
 if  (this.todo.lengh === 0){
     console.log("Todo list is empty!");
     }else{
@@ -16,6 +15,8 @@ if  (this.todo.lengh === 0){
         }else{
             console.log( '( )' , this.todo[i].todoText);
         }
+        
+
     }
 },
 
@@ -65,8 +66,8 @@ if(completedTodos === totalTodos){
 }
 }
 };
-todoList.toggleComplete(1)
-
-todoList.addTodos('this is an object', 'another', 'more', 'stuff');
-
-todoList.displayTodos();
+let displayTodoButton =document.getElementById('displayTodoButton');
+console.log(displayTodoButton);
+displayTodoButton.addEventListener('click', function(){
+    todoList.displayTodos();
+})
