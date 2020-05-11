@@ -8,17 +8,14 @@ let todoList ={
     }else{
             console.log("My Todo's : ")
         }
-
-    for(i = 0; i < this.todo.length; i++){
+     for(i = 0; i < this.todo.length; i++){
         console.log(this.todo[i].todoText);
         if (this.todo[i].completed ===true){
             console.log('(x)',this.todo[i].todoText);
         }else{
             console.log( '( )' , this.todo[i].todoText);
         }
-        
-
-    }
+        }
     },
 
     addTodos: function (todoText){
@@ -88,6 +85,29 @@ let todoList ={
         let handlers = {
             displayTodos: function(){
                 todoList.displayTodos()},
+            
+            addTodos: function(){
+               let addTodoTextInput= document.getElementById('addTodoTextInput')
+               todoList.addTodos(addTodoTextInput.value);
+               addTodoTextInput.value=""},    
+            changeTodos:function(){
+                let changeTodoPositionInput = document.getElementById('changeTodoPositionInput')
+                let changeTodoTextInput = document.getElementById('changeTodoTextInput')
+                todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value)
+                changeTodoPositionInput.value ="";
+                changeTodoTextInput.value = ""
+            },
             toggleAll:function(){
-                todoList.toggleAll()}
+                todoList.toggleAll()},
+            deleteTodos:function(){
+            let deleteTodos = document.getElementById('deleteTodoPositionInput')
+            todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+            deleteTodoPositionInput.value= ""
+            },
+
+            toggleCompleted: function(){
+                let toggleCompletePositionInput = document.getElementById('toggleCompletedTodoPositionInput')
+                todoList.toggleComplete(toggleCompletedTodoPositionInput.valueAsNumber)
+                toggleCompletedTodoPositionInput.value = "";
+            }
         };

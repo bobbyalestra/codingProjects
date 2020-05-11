@@ -6,12 +6,35 @@
     <title>Exercise1</title>
 </head>
 <body> Todo List</h1>
-  <p><input type ='text' id = 'addTodo()' placeholder='Enter Todo'></p>
+  <p></p>
     <h1>
-    <button onclick='displayTodos()' >Display Todo's</button>
-    <button onclick = 'toggleAll()'>Toggle All The Todo</button>
-    <button onclick = 'addTodo()'>Add todo</button>
-    <button onclick = 'deleteTodo()'>Delete Todo </button>
+        <button onclick='handlers.displayTodos()'>Display Todo's</button>
+        <div>
+            <button onclick = 'handlers.addTodos()'>Add todo</button>
+            <input type ='text' id = 'addTodoTextInput' placeholder='Enter A Todo'>
+        </div>
+        
+    
+    
+    <button onclick = 'handlers.toggleAll()'>Toggle All The Todo</button>
+    
+    <div>
+        <button onclick='handlers.changeTodos()'>Edit Todos</button>
+        <input id ='changeTodoPositionInput' type= 'number' placeholder="Input Position">
+        <input id= 'changeTodoTextInput' type='text' placeholder='Text Input'"> 
+    </div>
+    <div>
+    <button onclick = 'handlers.deleteTodos()'>Delete Todo </button>
+    <input type='number' id='deleteTodoPositionInput' placeholder="Position Item">
+    </div>
+
+    <div>
+        <button onclick='handlers.toggleCompleted()'>Completed Todo</button>
+        <input id= 'toggleCompletedTodoPositionInput' type ='number' placeholder="Complete position" >
+    
+    </div>
+
+
 </h1>
 
 
