@@ -207,7 +207,7 @@ diabetesScanner = {
       // let currentBG = document.carbCorrectionCalc.bgLevels;
       let currentBG = document.carbCorrectionCalc.number;
       
-       let carbCorrect = ((currentBG.value -130) /325);
+       let carbCorrect = ((currentBG.value -130) /300);
           
       alert(carbCorrect);
     }
