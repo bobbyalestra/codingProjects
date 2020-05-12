@@ -1,6 +1,6 @@
 let todoList ={
     todo: [],
-
+  
     displayTodos: function (){
        
     if  (this.todo.lengh === 0){
@@ -17,31 +17,23 @@ let todoList ={
         }
         }
     },
-
-addCurrentBG: function (todoText){
-
+  
+  addCurrentBG: function (todoText){
+  
         this.todo.push({
     todoText: todoText,
     completed: false
     });
     this.displayTodos();
-
     },
-
-   
-
     deleteTodo: function (position){
     this.todo.splice(position);
     this.displayTodos();
     },
-
-  
-   
-
-}
+  }
       let handlers = {
     
-            addCurrentBG: function(){
+        addCurrentBG: function(){
                let addTodoTextInput= document.getElementById('addTodoTextInput')
                todoList.addCurrentBG(addTodoTextInput.value);
                addTodoTextInput.value=""   
@@ -52,8 +44,8 @@ addCurrentBG: function (todoText){
                 view.displayTodos(); 
                 }, 
         };
-
-
+  
+  
     let view = { 
         displayTodos: function(){
             let todoUl = document.querySelector('ul');
@@ -61,8 +53,8 @@ addCurrentBG: function (todoText){
             for(let i = 0; i < todoList.todo.length; i++){
             let todoLi = document.createElement('li');
             let todo = todoList.todo[i]; 
-
-
+  
+  
             let todoTextWithCompletion = '';
             if(todo.completed === true){
                 todoTextWithCompletion = ' (x) ' + todo.todoText;
@@ -83,19 +75,20 @@ addCurrentBG: function (todoText){
         
         return deleteButton;
     }
-};
-
-let todoUl = document.querySelector('ul')
-todoUl.addEventListener('click', function(event){
+  };
+  
+  let todoUl = document.querySelector('ul')
+  todoUl.addEventListener('click', function(event){
     console.log(event.target.parentNode.id)
-let elementClicked = event.target;
+  let elementClicked = event.target;
     if(elementClicked.className === 'deleteButton'){
         
         handlers.deleteTodos(parseInt(elementClicked.parentNode.id))
     }
-});
-//////////////////////// ALL FOR ADDING THE BG TO THE SCREEN LIST
-diabetesScanner = {
+  });
+   
+  
+   diabetesScanner = {
     todaysTime: "", // refers to the  parameters of the scanId "id"function
     todaysDay: "", // refers to the  parameters of the scanId "name"function
     currentBG: "", // refers to the  parameters of the scanId "carbCorrection"function
@@ -140,26 +133,7 @@ diabetesScanner = {
       },
       
     //
-      updateTimeOfDay: function  () {
-                 let dropDown = `<select>`;
-                for(i = 0; i <this.timeOfDay.length; i++){
-                    for (j = 0; j <this.timeOfDay[i].length; j++){
-                        dropDown = dropDown + `<option value = '${this.timeOfDay[i]}>'${this.timeOfDay[i]} </option>`
-                    }
-                  }
-                    dropDown = dropDown + `</select>`
-                },
-             
-               
-              }
-              document.getElementById('timeOfDay').innerHTML = dropDown
-          
-    
-  
-  
-  
-  
-    
+    }  
     function scanId(id, name, inout, amount, carbCorrection) {
     diabetesScanner.todaysTime = id;
     diabetesScanner.todaysDay = name;
@@ -207,7 +181,7 @@ diabetesScanner = {
       // let currentBG = document.carbCorrectionCalc.bgLevels;
       let currentBG = document.carbCorrectionCalc.number;
       
-       let carbCorrect = ((currentBG.value -130) /300);
+       let carbCorrect = ((currentBG.value -150) /325);
           
       alert(carbCorrect);
     }
@@ -222,7 +196,3 @@ diabetesScanner = {
     }
   
   
-
-
-
-

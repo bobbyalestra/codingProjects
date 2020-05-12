@@ -1,3 +1,8 @@
+ 
+ 
+ 
+ 
+ 
  diabetesScanner = {
   todaysTime: "", // refers to the  parameters of the scanId "id"function
   todaysDay: "", // refers to the  parameters of the scanId "name"function
@@ -43,26 +48,7 @@ timeOfDay : ['Morning', 'Afternoon', 'Night', 'Midnight', 'TwoAM' ],
     },
     
   //
-    updateTimeOfDay: function  () {
-               let dropDown = `<select>`;
-              for(i = 0; i <this.timeOfDay.length; i++){
-                  for (j = 0; j <this.timeOfDay[i].length; j++){
-                      dropDown = dropDown + `<option value = '${this.timeOfDay[i]}>'${this.timeOfDay[i]} </option>`
-                  }
-                }
-                  dropDown = dropDown + `</select>`
-              },
-           
-             
-            }
-            document.getElementById('timeOfDay').innerHTML = dropDown
-        
-  
-
-
-
-
-  
+  }  
   function scanId(id, name, inout, amount, carbCorrection) {
   diabetesScanner.todaysTime = id;
   diabetesScanner.todaysDay = name;
@@ -124,64 +110,3 @@ function carbCover(totalCarbs, insulinCarbRatio){
      insulinCarbRatio = 180
   }
 
-
-   todoList ={
-    todo: [],
-
-    displayTodos: function (){
-       
-    if  (this.todo.lengh === 0){
-    console.log("Todo list is empty!");
-    }else{
-            console.log("My Todo's : ")
-        }
-     for(i = 0; i < this.todo.length; i++){
-        console.log(this.todo[i].todoText);
-        if (this.todo[i].completed ===true){
-            console.log('(x)',this.todo[i].todoText);
-        }else{
-            console.log( '( )' , this.todo[i].todoText);
-        }
-        }
-    },
-
-    addGlucoseLevel: function (todoText){
-
-        this.todo.push({
-    todoText: todoText,
-    completed: false
-    });
-    this.displayTodos();
-
-    }}
-
-
-    handlers = {
-    
-      addTodos: function(){
-         let addTodoTextInput= document.getElementById('addTodoTextInput')
-         todoList.addTodos(addTodoTextInput.value);
-         addTodoTextInput.value=""   
-         view.displayTodos(); 
-      }}
-    view = { 
-        displayTodos: function(){
-            let todoUl = document.querySelector('ul');
-              todoUl.innerHTML="";
-            for(let i = 0; i < todoList.todo.length; i++){
-            let todoLi = document.createElement('li');
-            let todo = todoList.todo[i]; 
-
-
-            let todoTextWithCompletion = '';
-            if(todo.completed === true){
-                todoTextWithCompletion = ' (x) ' + todo.todoText;
-            }else{
-                todoTextWithCompletion = ' ( ) ' + todo.todoText;
-             }
-            todoLi.id= i;
-            todoLi.textContent = todoTextWithCompletion ;
-            todoLi.textContent = todoList.todo[i].todoText;
-                todoLi.appendChild(this.createDeleteButton());
-                todoUl.appendChild(todoLi);   
-    }}}
