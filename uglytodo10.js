@@ -35,7 +35,7 @@ let todoList ={
     },
 
     deleteTodo: function (position){
-    this.todo.splice(position,1);
+    this.todo.splice(position);
     this.displayTodos();
     },
 
@@ -100,10 +100,8 @@ let todoList ={
             },
             toggleAll:function(){
                 todoList.toggleAll()},
-            deleteTodos:function(){
-            let deleteTodos = document.getElementById('deleteTodoPositionInput')
-            todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
-            deleteTodoPositionInput.value= ""
+            deleteTodos:function(position){
+            todoList.deleteTodo(position);
             view.displayTodos(); 
             },
 
@@ -152,4 +150,23 @@ let todoList ={
         
         return deleteButton;
     }
-}
+};
+
+let todoUl = document.querySelector('ul')
+todoUl.addEventListener('click', function(event){
+    console.log(event.target.parentNode.id)
+let elementClicked = event.target;
+    if(elementClicked.className === 'deleteButton'){
+        
+        handlers.deleteTodos(parseInt(elementClicked.parentNode.id))
+    }
+});
+
+
+view.setupEventListener();
+
+
+
+
+
+
