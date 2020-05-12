@@ -13,10 +13,6 @@
 timeOfDay : ['Morning', 'Afternoon', 'Night', 'Midnight', 'TwoAM' ],
 
   
-  //         NEED HELP BELOW
-  totalOfAllSales : this.totalmathdone + this.totalmathdone, // not working
-
-  
   setupLocalStorage: function (){
     if (Boolean(localStorage.getItem('name'))){
                     
@@ -27,6 +23,8 @@ timeOfDay : ['Morning', 'Afternoon', 'Night', 'Midnight', 'TwoAM' ],
       localStorage.setItem('name', JSON.stringify(name));
   }
   },
+
+  
   
   itemsScanned: function() {
     
@@ -44,7 +42,6 @@ timeOfDay : ['Morning', 'Afternoon', 'Night', 'Midnight', 'TwoAM' ],
       console.log(`!!!WARNING ARON HAS HIGH BG!!!`);
     },
     
-
   //
     updateTimeOfDay: function  () {
                let dropDown = `<select>`;
@@ -53,14 +50,18 @@ timeOfDay : ['Morning', 'Afternoon', 'Night', 'Midnight', 'TwoAM' ],
                       dropDown = dropDown + `<option value = '${this.timeOfDay[i]}>'${this.timeOfDay[i]} </option>`
                   }
                 }
-                  dropDown = `</select>`
+                  dropDown = dropDown + `</select>`
               },
            
-              
+             
             }
-              document.getElementById('timeOfDay').innerHTML = dropDown
+            document.getElementById('timeOfDay').innerHTML = dropDown
         
   
+
+
+
+
   
   function scanId(id, name, inout, amount, carbCorrection) {
   diabetesScanner.todaysTime = id;
@@ -82,7 +83,7 @@ timeOfDay : ['Morning', 'Afternoon', 'Night', 'Midnight', 'TwoAM' ],
 }
 
 
-dropdown = 
+
 
  
 scanId("730", "Monday", "in", 465, 150);
@@ -122,3 +123,65 @@ function carbCover(totalCarbs, insulinCarbRatio){
      totalCarbs = 55;
      insulinCarbRatio = 180
   }
+
+
+   todoList ={
+    todo: [],
+
+    displayTodos: function (){
+       
+    if  (this.todo.lengh === 0){
+    console.log("Todo list is empty!");
+    }else{
+            console.log("My Todo's : ")
+        }
+     for(i = 0; i < this.todo.length; i++){
+        console.log(this.todo[i].todoText);
+        if (this.todo[i].completed ===true){
+            console.log('(x)',this.todo[i].todoText);
+        }else{
+            console.log( '( )' , this.todo[i].todoText);
+        }
+        }
+    },
+
+    addGlucoseLevel: function (todoText){
+
+        this.todo.push({
+    todoText: todoText,
+    completed: false
+    });
+    this.displayTodos();
+
+    }}
+
+
+    handlers = {
+    
+      addTodos: function(){
+         let addTodoTextInput= document.getElementById('addTodoTextInput')
+         todoList.addTodos(addTodoTextInput.value);
+         addTodoTextInput.value=""   
+         view.displayTodos(); 
+      }}
+    view = { 
+        displayTodos: function(){
+            let todoUl = document.querySelector('ul');
+              todoUl.innerHTML="";
+            for(let i = 0; i < todoList.todo.length; i++){
+            let todoLi = document.createElement('li');
+            let todo = todoList.todo[i]; 
+
+
+            let todoTextWithCompletion = '';
+            if(todo.completed === true){
+                todoTextWithCompletion = ' (x) ' + todo.todoText;
+            }else{
+                todoTextWithCompletion = ' ( ) ' + todo.todoText;
+             }
+            todoLi.id= i;
+            todoLi.textContent = todoTextWithCompletion ;
+            todoLi.textContent = todoList.todo[i].todoText;
+                todoLi.appendChild(this.createDeleteButton());
+                todoUl.appendChild(todoLi);   
+    }}}
