@@ -42,10 +42,6 @@ let cardMethods = {
     cards.dealerCardsTotal;
     
     },
-
-
-    
-
     totalPlayer1Cards: function (){
         for (let i = 0; i < cards.player1Cards.length; i++){
             cards.player1Cards += cards.player1Cards[i];   
@@ -53,8 +49,6 @@ let cardMethods = {
          document.getElementById('player1Cards').innerText = cards.player1CardsTotal;
          cardMethods.initialDealPlayer1()
     },
- 
-
  totalDealerCards: function (){
     for (let i = 0; i < cards.dealerCards.length; i++){
         cards.dealerCardsTotal += cards.dealerCards[i];   
@@ -63,7 +57,7 @@ let cardMethods = {
 
     
     let html1 = '<ul>';
-    for (let i = 0; i < cards.dealerCards.length; i++){
+    for (let i = 0; i < 1; i++){
       
      html1 += `<li>${cards.dealerCards[i]}</li>`    
     
@@ -81,8 +75,13 @@ let cardMethods = {
          
      }
     
+},
+
 }
-}
+
+
+
+
 cardMethods.initialDealPlayer1()
 
 
