@@ -22,7 +22,7 @@ let cardMethods = {
     html = html + '</ul>'
     document.getElementById('player1Cards').innerHTML = html
     cards.player1CardsTotal;
-    this.initialDealPlayer1()
+   
     },
 
     initialDealDealer: function (){
@@ -40,8 +40,11 @@ let cardMethods = {
     html = html + '</ul>'
     document.getElementById('dealerCards').innerHTML = html
     cards.dealerCardsTotal;
+    
     },
 
+
+    
 
     totalPlayer1Cards: function (){
         for (let i = 0; i < cards.player1Cards.length; i++){
@@ -57,10 +60,31 @@ let cardMethods = {
         cards.dealerCardsTotal += cards.dealerCards[i];   
      }
      document.getElementById('dealerCardsTotal').innerText = cards.dealerCardsTotal;
-     cardMethods.initialDealDealer()
+
+    
+    let html1 = '<ul>';
+    for (let i = 0; i < cards.dealerCards.length; i++){
+      
+     html1 += `<li>${cards.dealerCards[i]}</li>`    
     
     }
+
+    html1 = html1 + '</ul>'
+    document.getElementById('dealerCards').innerHTML = html1
+    cards.dealerCardsTotal;
+
+ },
+ hitMe: function (){
+     let cardTotalValue = 21;
+    for(let i = 0; i <= cardTotalValue; i++ ){
+        cards.player1Cards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop() )
+         
+     }
+    
 }
+}
+cardMethods.initialDealPlayer1()
+
 
 
 document.getElementById('title').innerText = ' you lose casino';
