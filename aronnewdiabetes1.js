@@ -87,52 +87,50 @@ let todoList ={
     }
   });
    
-///////////
-let nameArray = [];
+// /////////
+// let nameArray = [];
 
 
-function addCarNameToArray() {
-  if (Boolean(localStorage.getItem("lsCarNameArray"))) {
-    let nameArray = JSON.parse(localStorage.getItem("lsCarNameArray"));
+// function addCurrentBgLs() {
+//   if (Boolean(localStorage.getItem("lsCurrentBg"))) {
+//     let nameArray = JSON.parse(localStorage.getItem("lsCurrentBg"));
    
-    let enteredName = document.getElementById("inputbox").value;
-    nameArray.push(enteredName);
+//     let enteredName = document.getElementById("inputbox").value;
+//     nameArray.push(enteredName);
    
-    localStorage.setItem("lsCarNameArray", JSON.stringify(nameArray));
+//     localStorage.setItem("lsCurrentBg", JSON.stringify(nameArray));
     
-    let liveNameArray = JSON.parse(localStorage.getItem("lsCarNameArray"));
-    console.log(liveNameArray);
+//     let liveNameArray = JSON.parse(localStorage.getItem("lsCurrentBg"));
+//     console.log(liveNameArray);
    
-    let htmlList = "<ul>";
-    for (let i = 0; i < liveNameArray.length; i++) {
-      htmlList = htmlList + `<li>${liveNameArray[i]}</li>`;
-    }
-    htmlList = htmlList + "</ul>";
+//     let htmlList = "<ul>";
+//     for (let i = 0; i < liveNameArray.length; i++) {
+//       htmlList = htmlList + `<li>${liveNameArray[i]}</li>`;
+//     }
+//     htmlList = htmlList + "</ul>";
    
-    document.getElementById("inputbox").innerHTML = htmlList;
+//     document.getElementById("inputbox").innerHTML = htmlList;
   
-} else {
-    let enteredName = document.getElementById("inputbox").value;
-    nameArray.push(enteredName);
-    localStorage.setItem("lsCarNameArray", JSON.stringify(nameArray));
-    displayNameOfCar();
+// } else {
+//     let enteredName = document.getElementById("inputbox").value;
+//     nameArray.push(enteredName);
+//     localStorage.setItem("lsCurrentBg", JSON.stringify(nameArray));
+//     displayNameOfCar();
   
-  }
-}
-function displayNameOfCar() {
+//   }
+// }
+// function addCurrentBG() {
  
   
-   liveNameArray = JSON.parse(localStorage.getItem("lsCarNameArray"));
-   htmlList = "<ul>";
-  for (let i = 0; i < liveNameArray.length; i++) {
-    htmlList = htmlList + `<li>${liveNameArray[i]}</li>`;
-  }
-  htmlList = htmlList + "</ul>";
-  document.getElementById("listOfCars").innerHTML = htmlList;
-}
-displayNameOfCar();
-
-  //////////
+//    liveNameArray = JSON.parse(localStorage.getItem("lsCurrentBg"));
+//    htmlList = "<ul>";
+//   for (let i = 0; i < liveNameArray.length; i++) {
+//     htmlList = htmlList + `<li>${liveNameArray[i]}</li>`;
+//   }
+//   htmlList = htmlList + "</ul>";
+//   document.getElementById("currentBG").innerHTML = htmlList;
+// }
+// addCurrentBgLs()///////
   
    diabetesScanner = {
     todaysTime: "", // refers to the  parameters of the scanId "id"function
@@ -150,13 +148,13 @@ displayNameOfCar();
   
     
     setupLocalStorage: function (){
-      if (Boolean(localStorage.getItem('name'))){
+      if (Boolean(localStorage.getItem('addTodoTextInput'))){
                       
-        let hotelString = localStorage.getItem('name')
-        hotel = JSON.parse(hotelString);
+         currentBG = localStorage.getItem('addTodoTextInput')
+        hotel = JSON.parse();
   
   } else{
-        localStorage.setItem('name', JSON.stringify(name));
+        localStorage.setItem('addTodoTextInput', JSON.stringify(currentBG));
     }
     },
   

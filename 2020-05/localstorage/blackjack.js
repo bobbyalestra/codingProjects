@@ -3,10 +3,11 @@ let cards = {
     player1Cards: [],
     player1CardsTotal: 0,
     dealerCards: [],
+    dealerCardsTotal: 0,
 
 }
 let cardMethods = {
-    initialDeal: function (){
+    initialDealPlayer1: function (){
         for(let i = 0; i < 2; i++ ){
        cards.player1Cards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop() )
         
@@ -21,17 +22,47 @@ let cardMethods = {
     html = html + '</ul>'
     document.getElementById('player1Cards').innerHTML = html
     cards.player1CardsTotal;
+    this.initialDealPlayer1()
     },
+
+    initialDealDealer: function (){
+        for(let i = 0; i < 2; i++ ){
+       cards.dealerCards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop() )
+        
+    }
+    let html = '<ul>';
+    for (let i = 0; i < cards.dealerCards.length; i++){
+      
+     html += `<li>${cards.dealerCards[i]}</li>`    
+    
+    }
+ 
+    html = html + '</ul>'
+    document.getElementById('dealerCards').innerHTML = html
+    cards.dealerCardsTotal;
+    },
+
 
     totalPlayer1Cards: function (){
         for (let i = 0; i < cards.player1Cards.length; i++){
-            cards.player1CardsTotal += cards.player1Cards[i];   
+            cards.player1Cards += cards.player1Cards[i];   
          }
-         document.getElementById('player1CardsTotal').innerText = cards.player1CardsTotal;
+         document.getElementById('player1Cards').innerText = cards.player1CardsTotal;
+         cardMethods.initialDealPlayer1()
+    },
+ 
 
+ totalDealerCards: function (){
+    for (let i = 0; i < cards.dealerCards.length; i++){
+        cards.dealerCardsTotal += cards.dealerCards[i];   
+     }
+     document.getElementById('dealerCardsTotal').innerText = cards.dealerCardsTotal;
+     cardMethods.initialDealDealer()
+    
     }
- }
+}
+
 
 document.getElementById('title').innerText = ' you lose casino';
-cardMethods.initialDeal();
-//document.getElementById('player1Name').innerText = prompt("What is your name")
+cardMethods.initialDealDealer();
+//  document.getElementById('player1Name').innerText = prompt("What is your name")
