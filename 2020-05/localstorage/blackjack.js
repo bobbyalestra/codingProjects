@@ -12,20 +12,11 @@ let cardMethods = {
        cards.player1Cards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop() )
         
     }
-    let html = '<ul>';
-    for (let i = 0; i < cards.player1Cards.length; i++){
-      
-     html += `<li>${cards.player1Cards[i]}</li>`    
-    
-    }
- 
-    html = html + '</ul>'
-    document.getElementById('player1Cards').innerHTML = html
-    cards.player1CardsTotal;
-   
+   // dont forget to add the update player cards method 
+   this.updatePlayer1Cards();
+   this.totalPlayer1Cards()
     },
-
-    initialDealDealer: function (){
+     initialDealDealer: function (){
         for(let i = 0; i < 2; i++ ){
        cards.dealerCards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop() )
         
@@ -33,23 +24,25 @@ let cardMethods = {
     let html = '<ul>';
     for (let i = 0; i < cards.dealerCards.length; i++){
       
-     html += `<li>${cards.dealerCards[i]}</li>`    
-    
+     html += `<li>${cards.dealerCards[i]}</li>`        
     }
  
     html = html + '</ul>'
     document.getElementById('dealerCards').innerHTML = html
     cards.dealerCardsTotal;
+    },
+    totalPlayer1Cards: function () {
     
-    },
-    totalPlayer1Cards: function (){
-        for (let i = 0; i < cards.player1Cards.length; i++){
-            cards.player1Cards += cards.player1Cards[i];   
-         }
-         document.getElementById('player1Cards').innerText = cards.player1CardsTotal;
-         cardMethods.initialDealPlayer1()
-    },
- totalDealerCards: function (){
+        for (let i = 0; i < cards.player1Cards.length; i++) {
+          cards.player1CardsTotal += cards.player1Cards[i];
+        }
+        console.log(cards.player1CardsTotal);
+        document.getElementById('totalPlayer1Cards').innerText = cards.player1CardsTotal;
+        cards.player1CardsTotal = 0 
+        this.updatePlayer1Cards();    
+    }, 
+       
+    totalDealerCards: function (){
     for (let i = 0; i < cards.dealerCards.length; i++){
         cards.dealerCardsTotal += cards.dealerCards[i];   
      }
@@ -58,7 +51,7 @@ let cardMethods = {
     
     let html1 = '<ul>';
     for (let i = 0; i < 1; i++){
-      
+              
      html1 += `<li>${cards.dealerCards[i]}</li>`    
     
     }
@@ -67,17 +60,32 @@ let cardMethods = {
     document.getElementById('dealerCards').innerHTML = html1
     cards.dealerCardsTotal;
 
- },
+ 
+
+  },
+
  hitMe: function (){
      let cardTotalValue = 21;
-    for(let i = 0; i <= cardTotalValue; i++ ){
+    for(let i = 0; i < 1; i++ ){
         cards.player1Cards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop() )
          
      }
-    
-},
+     this.totalPlayer1Cards()
+     this.updatePlayer1Cards()  
+    },
+    updatePlayer1Cards: function (){
+        let html = '<ul>';
+        for (let i = 0; i < cards.player1Cards.length; i++){
+          
+         html += `<li>${cards.player1Cards[i]}</li>`    
+        }
+        html = html + '</ul>'
+        document.getElementById('player1Cards').innerHTML = html
+        this.player1CardsTotal;
+    }
 
 }
+
 
 
 
@@ -86,6 +94,6 @@ cardMethods.initialDealPlayer1()
 
 
 
-document.getElementById('title').innerText = ' you lose casino';
+document.getElementById('title').innerText = ' The You Lose Casino';
 cardMethods.initialDealDealer();
 //  document.getElementById('player1Name').innerText = prompt("What is your name")
