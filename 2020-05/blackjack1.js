@@ -6,7 +6,7 @@ let cards = {
     dealerCards: [],
     dealerCardsTotal: 0,
     busted: 0,
-  
+    blackjack: 21,
   }
   
   let cardMethod = {
@@ -70,6 +70,7 @@ let cards = {
     
     player1Stand: function (){
         this.dealerPlayLogic();
+        
         },
   
       //dealer gets their cards
@@ -77,24 +78,53 @@ let cards = {
       dealerPlayLogic: function (){
         setTimeout(100)
         
-        if (player1CardsTotal == 21){
+        if (dealerCardsTotal == 21){
               while (dealerCardsTotal <= 21) {
                 cards.dealerCards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop())
               }
-          }
-        
+         
+         
+
+          if ( cards.busted = 1)
+            setTimeout(function() {alert('BUSTED! Give us your money!!')} , 100)
+            
+            cards.dealerCards= [];
+        }else if (cards.dealerCardsTotal = 21){
+            // chill for a bit
+        }
+        cards.dealerCardsTotal = 0;
+        this.initialDealDealer();
+        this.updateDealerCards()
+    
       },
 
 
-      initialDealerCards: function() {
-         
-        
-          cards.dealerCards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop())
-        
-        // player 1 cards updated 
-        this.updateDealerCards();
-  
-    },
+    //   initialDealerCards: function() {
+    //     for (let i = 0; i < 1; i++){  
+    //       cards.dealerCards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop());
+    //     }
+    //     // player 1 cards updated 
+    //     this.updateDealerCards();
+    // },
+
+
+    initialDealDealer: function (){
+      for(let i = 0; i <2; i++ ){
+     cards.dealerCards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop() )
+      
+  }
+  let html1 = '<ul>';
+  for (let i = 0; i < cards.dealerCards.length; i++){
+    
+   html1 += `<li>${cards.dealerCards[i]}</li>`        
+  }
+
+  html1 = html1 + '</ul>'
+  document.getElementById('dealersCards').innerHTML = html1
+  cards.dealerCardsTotal;
+    
+     
+  },
   
     // setTimeout(function() {alert('BUSTED! Give us your money!!')} , 100)
   
@@ -114,12 +144,12 @@ let cards = {
   
         }
         html += `</ul>`;
-        document.getElementById('dealerCards').innerHTML = html;
+        document.getElementById('dealersCards').innerHTML = html;
         this.totalDealerCards();
         
     }
 }
-    cardMethod.totalDealerCards()
+    
       cardMethod.initialDeal()
 
       

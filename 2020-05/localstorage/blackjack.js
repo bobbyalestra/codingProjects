@@ -30,6 +30,7 @@ let cardMethods = {
     html = html + '</ul>'
     document.getElementById('dealerCards').innerHTML = html
     cards.dealerCardsTotal;
+    this.initialDealDealer()
     },
     totalPlayer1Cards: function () {
     
