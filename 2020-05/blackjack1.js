@@ -91,11 +91,11 @@ let cards = {
             cards.dealerCards= [];
         }else if (cards.dealerCardsTotal = 21){
             // chill for a bit
-        }
+        return 'Winner'
         cards.dealerCardsTotal = 0;
         this.initialDealDealer();
         this.updateDealerCards()
-    
+        }
       },
 
 
@@ -135,11 +135,9 @@ let cards = {
         } if (dealerCardsTotal <=20){       
           cards.dealerCards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop())
         this.updateDealerCards()
-        }
+        }else if 
+          (cards.dealerCardsTotal < 21)
       
-      
-      
-    
         document.getElementById('dealerCardsTotal').innerText = cards.dealerCardsTotal;
   
     },
