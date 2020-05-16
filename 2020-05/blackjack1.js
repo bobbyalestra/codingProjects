@@ -132,7 +132,13 @@ let cards = {
           
         for (let i = 0; i < cards.dealerCards.length; i++) {
           cards.dealerCardsTotal += cards.dealerCards[i];
+        } if (dealerCardsTotal <=20){       
+          cards.dealerCards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop())
+        this.updateDealerCards()
         }
+      
+      
+      
     
         document.getElementById('dealerCardsTotal').innerText = cards.dealerCardsTotal;
   
