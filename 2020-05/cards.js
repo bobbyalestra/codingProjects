@@ -1,62 +1,20 @@
+let h1Tag = document.createElement("h1");
+h1Tag.innerText = "BlackJack";   
+document.body.appendChild(h1Tag);   
 
-     let deck = [{Value: 'A', Suit: 'Spades'}, {Value: 'A', Suit: 'Diamonds'}, {Value: '2', Suit: 'Clubs'}, {Value: '2', Suit: 'Spades'}, {Value: '2', Suit: 'Diamonds'}, {Value: '2', Suit: 'Clubs'}]
-   
-   deckOfCards ={
-suit : ['spades','diamonds', 'hearts', 'clubs' ],
- cardNumber : [ 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'  ] ,
 
-   getDeck : function()
-{
-	let deck = new Array();
 
-	for(var i = 0; i < suits.length; i++)
-	{
-		for(var j = 0; j < cardNumber.length; j++)
-		{
-			let card = {cardNumber: cardNumber[j], suit: suits[i]};
-			deck.push(card);
-		}
-	}
+let divTag2 = document.createElement("div"); 
+divTag2.innerText = "Player1";    
+document.body.appendChild(divTag2);   
 
-	return deck;
-},
-    
-    
-   shuffle: function(deck)
-{
-	// for 1000 turns
-	// switch the values of two random cards
-	for (var i = 0; i < 1000; i++)
-	{
-		var location1 = Math.floor((Math.random() * deck.length));
-		var location2 = Math.floor((Math.random() * deck.length));
-		var tmp = deck[location1];
+let pTag3 = document.createElement("p"); 
+pTag3.innerText = "";   
+document.body.appendChild(pTag3); 
 
-		deck[location1] = deck[location2];
-		deck[location2] = tmp;
-	}
-}
 
-    }
-  
+let divTag3 = document.createElement("div3"); 
+divTag3.innerText = "Dealer";   
+document.body.appendChild(divTag3); 
 
-    function renderDeck(deck)
-{
-      document.getElementById("deck").innerHTML = "";
 
-	for(let i = 0; i < deck.length; i++)
-	{
-		let card = document.createElement("div");
-		let value = document.createElement("div");
-		let suit = document.createElement("div");
-		card.className = "card";
-		cardNumber.className = "value";
-		Suit.className = "suit " + deck[i].Suit;
-
-		value.innerHTML = deck[i].Value;
-		card.appendChild(value);
-		card.appendChild(suit);
-
-		document.getElementById("deck").appendChild(card);
-	}
-}
