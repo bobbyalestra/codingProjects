@@ -104,7 +104,7 @@ let cards = {
         
         if (dealerCardsTotal == 21){
               while (dealerCardsTotal <= 21) {
-               cards.dealerCards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop()), dealerCardsTotal++
+               cards.dealerCards.push(cards.deck.splice(Math.floor(Math.random() * cards.deck.length), 1).pop()); cards.dealerCards++
               }
             
             }
