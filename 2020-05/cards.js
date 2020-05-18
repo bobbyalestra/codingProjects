@@ -4,17 +4,17 @@ document.body.appendChild(h1Tag);
 
 
 
-let divTag2 = document.createElement("div"); 
-divTag2.innerText = "Player1";    
-document.body.appendChild(divTag2);   
+let divTag1 = document.createElement("div1"); 
+divTag1.innerText = "Player1";    
+document.body.appendChild(divTag1);   
 
 let pTag3 = document.createElement("p"); 
 pTag3.innerText = "";   
 document.body.appendChild(pTag3); 
 
 
-let divTag3 = document.createElement("div3"); 
-divTag3.innerText = "Dealer";   
-document.body.appendChild(divTag3); 
+let divTag2 = document.createElement("div2"); 
+divTag2.innerText = "Dealer";   
+document.body.appendChild(divTag2); 
 
 
